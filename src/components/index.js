@@ -2,8 +2,8 @@ import About from "./about/About";
 import Contact from "./contact/Contact";
 import ErrorMessage from "./errors/ErrorMessage";
 import Footer from "./footer/Footer";
+import Header from "./header/Header";
 import Home from "./home/Home";
-import NavBar from "./navBar/NavBar";
 import Projects from "./projects/Projects";
 import SingleProject from "./singleProject/SingleProject";
 import Skills from "./skills/Skills";
@@ -14,8 +14,8 @@ export {
   Contact,
   ErrorMessage,
   Footer,
+  Header,
   Home,
-  NavBar,
   Projects,
   SingleProject,
   Skills,

@@ -1,10 +1,36 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import {
+  AboutPage,
+  ContactPage,
+  HomePage,
+  ProjectsPage,
+  SkillsPage,
+  Page404,
+} from "./pages";
+import Header from "./components/header/Header";
+import Footer from "./components/footer/Footer";
+
 import "./App.scss";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header"></header>
-    </div>
+    <BrowserRouter>
+      <div className="app">
+        <Header />
+        <main className="main">
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/skills" element={<SkillsPage />} />
+            <Route path="/projects" element={<ProjectsPage />} />
+            <Route path="/contact" element={<ContactPage />} />
+            <Route path="/*" element={<Page404 />} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
+    </BrowserRouter>
   );
 }
 
