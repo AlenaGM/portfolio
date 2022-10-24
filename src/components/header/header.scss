@@ -1,1 +1,65 @@
 @import "../../assets/styles/variables.scss";
+@import "../../assets/styles/buttons.scss";
+
+.app {
+  &__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $bg-header;
+    padding: 16px;
+    div {
+      display: flex;
+    }
+    &_logo {
+      max-width: 80px;
+      margin-right: 5px;
+      &:hover {
+        cursor: pointer;
+      }
+      @media screen and (max-width: 450px) {
+        max-width: 60px;
+      }
+    }
+    &_title {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      font-weight: 500;
+      font-size: calc(4px + 2vmin);
+      color: $text-status;
+      span {
+        font-weight: bold;
+        font-size: calc(20px + 2vmin);
+        color: $text-color;
+        &:hover {
+          color: $text-status;
+        }
+      }
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    &_menu {
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        align-items: center;
+        font-weight: bold;
+        font-size: calc(12px + 2vmin);
+        line-height: 32px;
+        color: $text-status;
+        li {
+          color: $text-status;
+          margin: 0 8px;
+          &:hover {
+            color: $text-color;
+          }
+        }
+      }
+    }
+  }
+}
