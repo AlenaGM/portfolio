@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { SocialIcon } from "react-social-icons";
 
 import logo from "../../assets/images/logo.png";
 
@@ -44,6 +45,26 @@ const Header = () => {
           </li>
         </ul>
       </nav>
+      <div className="app__header_social">
+        <SocialIcon
+          url="https://github.com/AlenaGM"
+          target="_blank"
+          fgColor="#fff"
+          style={{ height: 35, width: 35 }}
+        />
+        <SocialIcon
+          url="https://www.linkedin.com/in/alena-guillaume/"
+          target="_blank"
+          fgColor="#fff"
+          style={{ height: 35, width: 35 }}
+        />
+        <SocialIcon
+          url="https://t.me/alenagm"
+          target="_blank"
+          fgColor="#fff"
+          style={{ height: 35, width: 35 }}
+        />
+      </div>
     </header>
   );
 };
