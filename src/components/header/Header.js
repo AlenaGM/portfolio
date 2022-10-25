@@ -22,7 +22,7 @@ const Header = () => {
       <nav className="app__header_menu">
         <ul>
           {["home", "about", "skills", "projects", "contact"].map((item) => (
-            <li>
+            <li key={item}>
               <NavLink
                 end
                 style={({ isActive }) => ({
