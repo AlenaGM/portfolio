@@ -42,31 +42,100 @@
         cursor: pointer;
       }
     }
-    &_menu {
-      ul {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: flex-end;
-        align-items: center;
-        font-weight: bold;
-        font-size: calc(12px + 2vmin);
-        line-height: 32px;
-        color: $text-status;
-        li {
-          color: $text-status;
-          margin: 0 8px;
-          &:hover {
-            color: $text-color;
-          }
-        }
-      }
-    }
     &_social {
       display: flex;
       flex-wrap: wrap;
       justify-content: flex-end;
       a {
         margin: 6px;
+      }
+    }
+  }
+
+  &__navbar {
+    &_links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      align-items: center;
+      font-weight: bold;
+      font-size: calc(12px + 2vmin);
+      line-height: 32px;
+      color: $text-status;
+      li {
+        color: $text-status;
+        margin: 0 8px;
+        &:hover {
+          color: $text-color;
+        }
+      }
+
+      @media screen and (max-width: 900px) {
+        display: none;
+      }
+    }
+
+    &_menu {
+      p {
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        @media screen and (min-width: 900px) {
+          display: none;
+        }
+      }
+
+      div {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 5;
+        padding: 1rem;
+        width: 80%;
+        height: 100vh;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        flex-direction: column;
+        background: rgb(255, 255, 255);
+        box-shadow: 0 0 20px rgba(168, 168, 168, 0.15);
+
+        p {
+          margin: 0.5rem 1rem;
+        }
+
+        ul {
+          list-style: none;
+          margin: 0;
+          padding: 0;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          flex-direction: column;
+
+          li {
+            margin: 1rem;
+
+            a {
+              color: $text-main;
+              text-decoration: none;
+              font-size: 1rem;
+              text-transform: uppercase;
+              font-weight: 500;
+              transition: all 0.3s ease-in-out;
+              &:hover {
+                color: $text-color;
+              }
+            }
+          }
+        }
+
+        @media screen and (min-width: 900px) {
+          display: none;
+        }
       }
     }
   }
