@@ -1,1 +1,37 @@
 @import "../../assets/styles/variables.scss";
+
+.app__contact {
+  color: $text-main;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  width: 100%;
+  max-width: 1000px;
+  margin: 4vw auto;
+  justify-content: center;
+  align-items: center;
+  column-gap: 2vw;
+  row-gap: 4vw;
+  padding: 16px;
+
+  &_telmail {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    column-gap: 2rem;
+    a {
+      margin-left: 0.75rem;
+    }
+  }
+
+  &_social {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    column-gap: 2rem;
+  }
+}
