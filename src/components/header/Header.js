@@ -89,18 +89,21 @@ const Header = () => {
         <SocialIcon
           url="https://github.com/AlenaGM"
           target="_blank"
+          rel="noreferrer"
           fgColor="#fff"
           style={{ height: 35, width: 35 }}
         />
         <SocialIcon
           url="https://www.linkedin.com/in/alena-guillaume/"
           target="_blank"
+          rel="noreferrer"
           fgColor="#fff"
           style={{ height: 35, width: 35 }}
         />
         <SocialIcon
           url="https://t.me/alenagm"
           target="_blank"
+          rel="noreferrer"
           fgColor="#fff"
           style={{ height: 35, width: 35 }}
         />
