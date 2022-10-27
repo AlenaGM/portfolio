@@ -42,24 +42,19 @@ const Projects = () => {
         My creative <span>Portfolio</span> section
       </h2>
       <div className="app__work-filter">
-        {[
-          "React JS",
-          "Vue",
-          "JavaScript",
-          "Wordpress",
-          "Components",
-          "All",
-        ].map((item, index) => (
-          <div
-            key={index}
-            onClick={() => handleProjectFilter(item)}
-            className={`app__work-filter-item app__flex p-text ${
-              activeFilter === item ? "item-active" : ""
-            }`}
-          >
-            {item}
-          </div>
-        ))}
+        {["React", "Vue", "JavaScript", "Wordpress", "Components", "All"].map(
+          (item, index) => (
+            <div
+              key={index}
+              onClick={() => handleProjectFilter(item)}
+              className={`app__work-filter-item app__flex p-text ${
+                activeFilter === item ? "item-active" : ""
+              }`}
+            >
+              {item}
+            </div>
+          )
+        )}
       </div>
       <motion.div
         animate={animateCard}
