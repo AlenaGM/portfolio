@@ -138,8 +138,7 @@
     align-items: flex-end;
     flex-direction: column;
     background: #2a323d;
-    border: 1px solid #3f4b5b;
-    box-shadow: 0 0 20px rgba(168, 168, 168, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.18);
 
     &_icon-open {
       cursor: pointer;
@@ -172,7 +171,7 @@
       flex-direction: column;
     }
     &_link {
-      font-size: calc(8px + 2vmin);
+      font-size: calc(6px + 2vmin);
       transition: all 0.3s ease-in-out;
       text-transform: capitalize;
       margin: 1rem;
