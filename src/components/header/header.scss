@@ -1,25 +1,48 @@
 @import "../../assets/styles/variables.scss";
 @import "../../assets/styles/buttons.scss";
 
-.app {
-  &__header {
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+  background: rgb(52, 62, 77, 0.85);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+
+  &__navbar {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
     align-items: center;
-    background-color: $bg-header;
-    padding: 16px;
-    a div {
-      display: flex;
-    }
+    padding: 0.5rem 1rem;
+    color: #fff9;
     &_logo {
-      max-width: 80px;
-      margin-right: 6px;
-      &:hover {
-        cursor: pointer;
-      }
-      @media screen and (max-width: 450px) {
-        max-width: 60px;
+      font-weight: 700;
+      text-decoration: none;
+      display: flex;
+      flex-direction: row;
+      img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border-radius: 4px;
+        margin-right: 0.75rem;
+        &:hover {
+          cursor: pointer;
+        }
+        @media screen and (max-width: 450px) {
+          max-width: 40px;
+        }
+        @media screen and (min-width: 2000px) {
+          width: 100px;
+          height: 100px;
+        }
       }
     }
     &_title {
@@ -27,120 +50,143 @@
       flex-direction: column;
       align-items: flex-start;
       justify-content: center;
+      font-family: "Roboto Condensed", sans-serif;
+      text-align: left;
       font-weight: 500;
-      font-size: calc(4px + 2vmin);
-      color: $text-status;
+      font-size: calc(2px + 2vmin);
       span {
+        font-family: "Roboto Condensed", sans-serif;
         font-weight: bold;
-        font-size: calc(20px + 2vmin);
-        color: $text-color;
+        font-size: calc(10px + 2vmin);
+        color: $text-color-accent;
         &:hover {
-          color: $text-status;
+          color: $color-accent;
         }
       }
       &:hover {
         cursor: pointer;
       }
     }
-    &_social {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: flex-end;
-      a {
-        margin: 6px;
-      }
+  }
 
-      @media screen and (max-width: 992px) {
-        display: none;
+  &__menu {
+    &_links {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      flex: 1;
+    }
+    &_link {
+      font-size: calc(2px + 2vmin);
+      padding: 1rem;
+      color: $link-color;
+      border-radius: 4px;
+      transition: box-shadow 0.15s;
+      cursor: pointer;
+      flex-direction: column;
+      display: flex;
+      align-items: center;
+      div {
+        width: 5px;
+        height: 5px;
+        background: transparent;
+        border-radius: 50%;
+        margin-bottom: 5px;
       }
+      a {
+        color: $link-color;
+        text-decoration: none;
+        flex-direction: column;
+        transition: all 0.3s ease-in-out;
+      }
+      &:hover {
+        div {
+          background-color: $color-accent;
+        }
+        a {
+          color: $color-accent;
+        }
+      }
+    }
+    @media screen and (max-width: 961px) {
+      display: none;
     }
   }
 
-  &__navbar {
-    &_links {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: flex-end;
-      align-items: center;
-      font-weight: bold;
-      font-size: calc(12px + 2vmin);
-      line-height: 32px;
-      color: $text-status;
-      li {
-        color: $text-status;
-        margin: 0 8px;
-        &:hover {
-          color: $text-color;
-        }
-      }
+  &__resume {
+    @media screen and (max-width: 961px) {
+      display: none;
+    }
+  }
 
-      @media screen and (max-width: 992px) {
+  &__burger {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 5;
+    padding: 1rem;
+    height: 100vh;
+    width: 80%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    flex-direction: column;
+    background: #2a323d;
+    border: 1px solid #3f4b5b;
+    box-shadow: 0 0 20px rgba(168, 168, 168, 0.15);
+
+    &_icon-open {
+      cursor: pointer;
+      color: $link-color;
+      &:hover {
+        color: $color-accent;
+      }
+      @media screen and (min-width: 961px) {
         display: none;
       }
     }
 
-    &_menu {
-      p {
-        width: 35px;
-        height: 35px;
-        border-radius: 50%;
-        @media screen and (min-width: 992px) {
-          display: none;
-        }
+    &_icon-close {
+      cursor: pointer;
+      color: $link-color;
+      &:hover {
+        color: $color-accent;
       }
+    }
 
-      div {
-        position: fixed;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        z-index: 5;
-        padding: 1rem;
-        width: 80%;
-        height: 100vh;
-        display: flex;
-        justify-content: flex-end;
-        align-items: flex-end;
-        flex-direction: column;
-        background: rgb(255, 255, 255);
-        box-shadow: 0 0 20px rgba(168, 168, 168, 0.15);
-
-        p {
-          margin: 0.5rem 1rem;
-        }
-
-        ul {
-          list-style: none;
-          margin: 0;
-          padding: 0;
-          width: 100%;
-          height: 100%;
-          display: flex;
-          justify-content: flex-start;
-          align-items: center;
-          flex-direction: column;
-
-          li {
-            margin: 1rem;
-
-            a {
-              color: $text-main;
-              text-decoration: none;
-              font-size: 1rem;
-              text-transform: uppercase;
-              font-weight: 500;
-              transition: all 0.3s ease-in-out;
-              &:hover {
-                color: $text-color;
-              }
-            }
-          }
-        }
-
-        @media screen and (min-width: 992px) {
-          display: none;
-        }
+    &_links {
+      list-style: none;
+      margin-top: 120px;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-direction: column;
+    }
+    &_link {
+      font-size: calc(8px + 2vmin);
+      transition: all 0.3s ease-in-out;
+      text-transform: capitalize;
+      margin: 1rem;
+      &:hover {
+        color: $color-accent;
       }
+    }
+
+    li:last-of-type {
+      margin-top: 1.5rem;
+    }
+
+    @media screen and (min-width: 961px) {
+      display: none;
     }
   }
 }

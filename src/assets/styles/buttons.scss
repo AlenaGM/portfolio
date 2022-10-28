@@ -1,18 +1,27 @@
 @import "./variables";
 
 .button {
-  color: $text-status;
-  font-size: 16px;
-  text-align: center;
-  text-transform: uppercase;
-  padding: 4px 18px;
-  background-color: $btn;
-  border: none;
-  border-radius: 8px;
-  box-shadow: 0 2px 0 #23262f3b;
+  margin: 0;
+  display: inline-flex;
   cursor: pointer;
+  user-select: none;
+  align-items: center;
+  vertical-align: bottom;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  color: #151515;
+  background: $color-accent;
+  border: 1px solid $color-accent;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.85rem;
+  transition: background-color 0.15s, border-color 0.15s, box-shadow 0.15s;
+  border-radius: 4px;
   &:hover {
-    background-color: $btn-hover;
-    transform: translateY(-3px);
+    background-color: $color-accent-hover;
+  }
+  &:active {
+    background-color: $color-accent-hover;
+    border: 1px solid $text-color;
   }
 }

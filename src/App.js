@@ -17,7 +17,7 @@ import "./App.scss";
 function App() {
   return (
     <BrowserRouter>
-      <div className="app">
+      <div className="app" id="app">
         <Header />
         <main className="main">
           <Routes>
