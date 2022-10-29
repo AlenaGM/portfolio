@@ -7,6 +7,22 @@ import "./header.scss";
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
+  const closeBurger = () => {
+    //e.stopPropagation();
+    setMenuOpen(false);
+    document.body.style.overflow = "unset";
+    document.body.style.backgroundColor = "#20262e";
+  };
+
+  const openBurger = () => {
+    setMenuOpen(true);
+
+    if (typeof window != "undefined" && window.document) {
+      document.body.style.overflow = "hidden";
+      document.body.style.backgroundColor = "red";
+    }
+  };
+
   return (
     <header className="app__header header">
       <div className="header__navbar">
@@ -47,10 +63,7 @@ const Header = () => {
             Resume
           </a>
         </div>
-        <p
-          className="header__burger_icon-open"
-          onClick={() => setMenuOpen(true)}
-        >
+        <p className="header__burger_icon-open" onClick={() => openBurger()}>
           Open
         </p>
         {menuOpen && (
@@ -61,18 +74,14 @@ const Header = () => {
           >
             <p
               className="header__burger_icon-close"
-              onClick={() => setMenuOpen(false)}
+              onClick={() => closeBurger()}
             >
               Close
             </p>
             <ul className="header__burger_links">
               {["home", "skills", "work", "contact"].map((item) => (
                 <li key={item} className="header__burger_link">
-                  <NavLink
-                    end
-                    to={`/${item}`}
-                    onClick={() => setMenuOpen(false)}
-                  >
+                  <NavLink end to={`/${item}`} onClick={() => closeBurger()}>
                     {item}
                   </NavLink>
                 </li>
@@ -83,7 +92,7 @@ const Header = () => {
                   href="https://github.com/AlenaGM"
                   target="_blank"
                   rel="noreferrer"
-                  onClick={() => setMenuOpen(false)}
+                  onClick={() => closeBurger()}
                 >
                   Resume
                 </a>
