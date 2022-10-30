@@ -39,7 +39,18 @@ const Header = () => {
 
         <nav className="navbar__menu">
           <ul className="navbar__menu_links">
-            {["Home", "About", "Skills", "Projects", "Contact"].map((item) => (
+            <li key="home" className="navbar__menu_link">
+              <NavLink
+                end
+                style={({ isActive }) => ({
+                  color: isActive && "#8dd0ff",
+                })}
+                to={`/`}
+              >
+                home
+              </NavLink>
+            </li>
+            {["about", "skills", "projects", "contact"].map((item) => (
               <li key={item} className="navbar__menu_link">
                 <NavLink
                   end
@@ -85,7 +96,12 @@ const Header = () => {
                 <span />
               </div>
               <ul className="navbar__burger_links">
-                {["home", "skills", "work", "contact"].map((item) => (
+                <li key="home" className="navbar__burger_link">
+                  <NavLink end to={`/`}>
+                    home
+                  </NavLink>
+                </li>
+                {["about", "skills", "projects", "contact"].map((item) => (
                   <li key={item} className="navbar__burger_link">
                     <NavLink
                       end
