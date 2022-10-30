@@ -1,38 +1,21 @@
 @import "./assets/styles/variables.scss";
 
-//ok
-
-#app {
-  margin: 0 auto;
-
+.app {
   font-weight: 400;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-}
-
-//fin ok
-
-.app {
-  //display: flex;
-  //flex-direction: column;
-  //min-height: 100vh;
-  //text-align: center;
 
   main {
     position: relative;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    //background-color: $bg;
     max-width: 1280px;
-
-    a div {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-around;
-      padding: 16px;
-    }
+    width: 100%;
+    padding: 1rem;
+    background-color: $error;
+    margin: 0 auto 0 auto;
+    align-items: center;
   }
 }
