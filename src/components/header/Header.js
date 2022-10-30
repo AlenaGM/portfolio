@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
-import OutsideClickHandler from "react-outside-click-handler";
 
 import "./header.scss";
 
@@ -69,11 +68,7 @@ const Header = () => {
           Open
         </p>
         {menuOpen && (
-          <OutsideClickHandler
-            onOutsideClick={() => {
-              closeBurgerMenu();
-            }}
-          >
+          <>
             <motion.div
               whileInView={{ x: [300, 0] }}
               transition={{ duration: 0.85, ease: "easeOut" }}
@@ -110,7 +105,11 @@ const Header = () => {
                 </li>
               </ul>
             </motion.div>
-          </OutsideClickHandler>
+            <div
+              className="navbar__burger_overlay"
+              onClick={() => closeBurgerMenu()}
+            />
+          </>
         )}
       </div>
     </header>
