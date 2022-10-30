@@ -19,6 +19,7 @@
   border-radius: 4px;
   &:hover {
     background-color: $color-accent-hover;
+    color: $text-color;
   }
   &:active {
     background-color: $color-accent-hover;

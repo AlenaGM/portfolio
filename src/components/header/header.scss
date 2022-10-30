@@ -67,6 +67,7 @@
       }
       &:hover {
         cursor: pointer;
+        color: $text-color;
       }
     }
 
@@ -220,9 +221,6 @@
         transition: all 0.3s ease-in-out;
         text-transform: capitalize;
         margin: 1rem;
-        &:hover {
-          color: $color-accent;
-        }
       }
 
       li:last-of-type {
