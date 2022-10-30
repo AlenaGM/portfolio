@@ -128,7 +128,6 @@
     &__burger {
       position: fixed;
       top: 0;
-      bottom: 0;
       right: 0;
       z-index: 5;
       padding: 1rem;
@@ -141,22 +140,66 @@
       background: #2a323d;
       border: 1px solid rgba(255, 255, 255, 0.18);
 
-      &_icon-open {
+      &_icon {
+        align-items: center;
+        justify-self: end;
+        width: 30px;
+        height: 22px;
+        position: relative;
         cursor: pointer;
-        color: $link-color;
-        &:hover {
-          color: $color-accent;
+
+        span,
+        &::before,
+        &::after {
+          left: 0;
+          position: absolute;
+          height: 14%;
+          width: 100%;
+          transition: all 0.2s ease 0s;
+          background-color: $link-color;
+          border-radius: 4px;
         }
+
+        &::before,
+        &::after {
+          content: "";
+        }
+
+        &::before {
+          top: 0;
+        }
+
+        &::after {
+          bottom: 0;
+        }
+
+        span {
+          top: 50%;
+          transform: scale(1) translate(0px, -50%);
+        }
+
         @media screen and (min-width: 961px) {
           display: none;
         }
-      }
 
-      &_icon-close {
-        cursor: pointer;
-        color: $link-color;
-        &:hover {
-          color: $color-accent;
+        &.active {
+          position: fixed;
+          top: 1.27rem;
+          right: 1rem;
+
+          &::before {
+            top: 50%;
+            transform: rotate(-45deg) translate(0px, -50%);
+          }
+
+          &::after {
+            bottom: 50%;
+            transform: rotate(45deg) translate(0px, 50%);
+          }
+
+          span {
+            transform: scale(0) translate(0px, -50%);
+          }
         }
       }
 
@@ -193,6 +236,9 @@
         top: 0;
         width: 100vw;
         height: 100vh;
+        @media screen and (min-width: 961px) {
+          display: none;
+        }
       }
 
       @media screen and (min-width: 961px) {

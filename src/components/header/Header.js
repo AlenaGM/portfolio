@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
+import classnames from "classnames";
 
 import "./header.scss";
 
@@ -19,6 +20,11 @@ const Header = () => {
       document.body.style.overflow = "hidden";
     }
   };
+
+  const burgerIconClasses = classnames({
+    navbar__burger_icon: true,
+    active: menuOpen,
+  });
 
   return (
     <header className="app__header">
@@ -51,7 +57,7 @@ const Header = () => {
 
         <div className="navbar__resume" type="button">
           <a
-            className="button"
+            className={burgerIconClasses}
             href="https://github.com/AlenaGM"
             target="_blank"
             rel="noreferrer"
@@ -61,12 +67,10 @@ const Header = () => {
           </a>
         </div>
 
-        <p
-          className="navbar__burger_icon-open"
-          onClick={() => openBurgerMenu()}
-        >
-          Open
-        </p>
+        <div className={burgerIconClasses} onClick={() => openBurgerMenu()}>
+          <span />
+        </div>
+
         {menuOpen && (
           <>
             <motion.div
@@ -74,12 +78,12 @@ const Header = () => {
               transition={{ duration: 0.85, ease: "easeOut" }}
               className="navbar__burger"
             >
-              <p
-                className="navbar__burger_icon-close"
+              <div
+                className={burgerIconClasses}
                 onClick={() => closeBurgerMenu()}
               >
-                Close
-              </p>
+                <span />
+              </div>
               <ul className="navbar__burger_links">
                 {["home", "skills", "work", "contact"].map((item) => (
                   <li key={item} className="navbar__burger_link">
