@@ -97,7 +97,7 @@ const Header = () => {
               </div>
               <ul className="navbar__burger_links">
                 <li key="home" className="navbar__burger_link">
-                  <NavLink end to={`/`}>
+                  <NavLink end to={`/`} onClick={() => closeBurgerMenu()}>
                     home
                   </NavLink>
                 </li>
