@@ -1,43 +1,41 @@
 import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
+import OutsideClickHandler from "react-outside-click-handler";
 
 import "./header.scss";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const closeBurger = () => {
-    //e.stopPropagation();
+  const closeBurgerMenu = () => {
     setMenuOpen(false);
     document.body.style.overflow = "unset";
-    document.body.style.backgroundColor = "#20262e";
   };
 
-  const openBurger = () => {
+  const openBurgerMenu = () => {
     setMenuOpen(true);
 
     if (typeof window != "undefined" && window.document) {
       document.body.style.overflow = "hidden";
-      document.body.style.backgroundColor = "red";
     }
   };
 
   return (
-    <header className="app__header header">
-      <div className="header__navbar">
+    <header className="app__header">
+      <div className="header__navbar navbar">
         <Link to="/">
-          <div className="header__navbar_logo">
-            <h1 className="header__navbar_title">
+          <div className="navbar__logo">
+            <h1 className="navbar__title">
               <span>Alena</span> Frontend developer
             </h1>
           </div>
         </Link>
 
-        <nav className="header__menu">
-          <ul className="header__menu_links">
+        <nav className="navbar__menu">
+          <ul className="navbar__menu_links">
             {["Home", "About", "Skills", "Projects", "Contact"].map((item) => (
-              <li key={item} className="header__menu_link">
+              <li key={item} className="navbar__menu_link">
                 <NavLink
                   end
                   style={({ isActive }) => ({
@@ -52,7 +50,7 @@ const Header = () => {
           </ul>
         </nav>
 
-        <div className="header__resume" type="button">
+        <div className="navbar__resume" type="button">
           <a
             className="button"
             href="https://github.com/AlenaGM"
@@ -63,42 +61,56 @@ const Header = () => {
             Resume
           </a>
         </div>
-        <p className="header__burger_icon-open" onClick={() => openBurger()}>
+
+        <p
+          className="navbar__burger_icon-open"
+          onClick={() => openBurgerMenu()}
+        >
           Open
         </p>
         {menuOpen && (
-          <motion.div
-            whileInView={{ x: [300, 0] }}
-            transition={{ duration: 0.85, ease: "easeOut" }}
-            className="header__burger"
+          <OutsideClickHandler
+            onOutsideClick={() => {
+              closeBurgerMenu();
+            }}
           >
-            <p
-              className="header__burger_icon-close"
-              onClick={() => closeBurger()}
+            <motion.div
+              whileInView={{ x: [300, 0] }}
+              transition={{ duration: 0.85, ease: "easeOut" }}
+              className="navbar__burger"
             >
-              Close
-            </p>
-            <ul className="header__burger_links">
-              {["home", "skills", "work", "contact"].map((item) => (
-                <li key={item} className="header__burger_link">
-                  <NavLink end to={`/${item}`} onClick={() => closeBurger()}>
-                    {item}
-                  </NavLink>
+              <p
+                className="navbar__burger_icon-close"
+                onClick={() => closeBurgerMenu()}
+              >
+                Close
+              </p>
+              <ul className="navbar__burger_links">
+                {["home", "skills", "work", "contact"].map((item) => (
+                  <li key={item} className="navbar__burger_link">
+                    <NavLink
+                      end
+                      to={`/${item}`}
+                      onClick={() => closeBurgerMenu()}
+                    >
+                      {item}
+                    </NavLink>
+                  </li>
+                ))}
+                <li>
+                  <a
+                    className="button"
+                    href="https://github.com/AlenaGM"
+                    target="_blank"
+                    rel="noreferrer"
+                    onClick={() => closeBurgerMenu()}
+                  >
+                    Resume
+                  </a>
                 </li>
-              ))}
-              <li>
-                <a
-                  className="button"
-                  href="https://github.com/AlenaGM"
-                  target="_blank"
-                  rel="noreferrer"
-                  onClick={() => closeBurger()}
-                >
-                  Resume
-                </a>
-              </li>
-            </ul>
-          </motion.div>
+              </ul>
+            </motion.div>
+          </OutsideClickHandler>
         )}
       </div>
     </header>

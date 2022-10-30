@@ -1,7 +1,7 @@
 @import "../../assets/styles/variables.scss";
 @import "../../assets/styles/buttons.scss";
 
-.header {
+.app__header {
   position: fixed;
   top: 0;
   left: 0;
@@ -12,7 +12,7 @@
   -webkit-backdrop-filter: blur(4px);
   border: 1px solid rgba(255, 255, 255, 0.18);
 
-  &__navbar {
+  .navbar {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -22,7 +22,8 @@
     align-items: center;
     padding: 0.5rem 1rem;
     color: #fff9;
-    &_logo {
+
+    &__logo {
       font-weight: 700;
       text-decoration: none;
       display: flex;
@@ -45,7 +46,8 @@
         }
       }
     }
-    &_title {
+
+    &__title {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
@@ -67,125 +69,125 @@
         cursor: pointer;
       }
     }
-  }
 
-  &__menu {
-    &_links {
-      margin: 0;
-      padding: 0;
-      list-style: none;
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      flex: 1;
-    }
-    &_link {
-      font-size: calc(2px + 2vmin);
-      padding: 1rem;
-      color: $link-color;
-      border-radius: 4px;
-      transition: box-shadow 0.15s;
-      cursor: pointer;
-      flex-direction: column;
-      display: flex;
-      align-items: center;
-      div {
-        width: 5px;
-        height: 5px;
-        background: transparent;
-        border-radius: 50%;
-        margin-bottom: 5px;
+    &__menu {
+      &_links {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
       }
-      a {
+      &_link {
+        font-size: calc(2px + 2vmin);
+        padding: 1rem;
         color: $link-color;
-        text-decoration: none;
+        border-radius: 4px;
+        transition: box-shadow 0.15s;
+        cursor: pointer;
         flex-direction: column;
-        transition: all 0.3s ease-in-out;
-      }
-      &:hover {
+        display: flex;
+        align-items: center;
         div {
-          background-color: $color-accent;
+          width: 5px;
+          height: 5px;
+          background: transparent;
+          border-radius: 50%;
+          margin-bottom: 5px;
         }
         a {
-          color: $color-accent;
+          color: $link-color;
+          text-decoration: none;
+          flex-direction: column;
+          transition: all 0.3s ease-in-out;
+        }
+        &:hover {
+          div {
+            background-color: $color-accent;
+          }
+          a {
+            color: $color-accent;
+          }
         }
       }
-    }
-    @media screen and (max-width: 961px) {
-      display: none;
-    }
-  }
-
-  &__resume {
-    @media screen and (max-width: 961px) {
-      display: none;
-    }
-  }
-
-  &__burger {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    z-index: 5;
-    padding: 1rem;
-    height: 100vh;
-    width: 80%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-end;
-    flex-direction: column;
-    background: #2a323d;
-    border: 1px solid rgba(255, 255, 255, 0.18);
-
-    &_icon-open {
-      cursor: pointer;
-      color: $link-color;
-      &:hover {
-        color: $color-accent;
-      }
-      @media screen and (min-width: 961px) {
+      @media screen and (max-width: 961px) {
         display: none;
       }
     }
 
-    &_icon-close {
-      cursor: pointer;
-      color: $link-color;
-      &:hover {
-        color: $color-accent;
+    &__resume {
+      @media screen and (max-width: 961px) {
+        display: none;
       }
     }
 
-    &_links {
-      list-style: none;
-      margin-top: 120px;
-      padding: 0;
-      width: 100%;
-      height: 100%;
+    &__burger {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      z-index: 5;
+      padding: 1rem;
+      height: 100vh;
+      width: 85%;
       display: flex;
       justify-content: flex-start;
-      align-items: center;
+      align-items: flex-end;
       flex-direction: column;
-    }
-    &_link {
-      font-size: calc(6px + 2vmin);
-      transition: all 0.3s ease-in-out;
-      text-transform: capitalize;
-      margin: 1rem;
-      &:hover {
-        color: $color-accent;
+      background: #2a323d;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+
+      &_icon-open {
+        cursor: pointer;
+        color: $link-color;
+        &:hover {
+          color: $color-accent;
+        }
+        @media screen and (min-width: 961px) {
+          display: none;
+        }
       }
-    }
 
-    li:last-of-type {
-      margin-top: 1.5rem;
-    }
+      &_icon-close {
+        cursor: pointer;
+        color: $link-color;
+        &:hover {
+          color: $color-accent;
+        }
+      }
 
-    @media screen and (min-width: 961px) {
-      display: none;
+      &_links {
+        list-style: none;
+        margin-top: 120px;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+      }
+      &_link {
+        font-size: calc(6px + 2vmin);
+        transition: all 0.3s ease-in-out;
+        text-transform: capitalize;
+        margin: 1rem;
+        &:hover {
+          color: $color-accent;
+        }
+      }
+
+      li:last-of-type {
+        margin-top: 1.5rem;
+      }
+
+      @media screen and (min-width: 961px) {
+        display: none;
+      }
     }
   }
 }
