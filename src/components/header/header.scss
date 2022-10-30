@@ -142,6 +142,8 @@
       border: 1px solid rgba(255, 255, 255, 0.18);
 
       &_icon-open {
+        position: fixed;
+        right: 1rem;
         cursor: pointer;
         color: $link-color;
         &:hover {
