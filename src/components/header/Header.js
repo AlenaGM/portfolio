@@ -57,7 +57,7 @@ const Header = () => {
 
         <div className="navbar__resume" type="button">
           <a
-            className={burgerIconClasses}
+            className="button"
             href="https://github.com/AlenaGM"
             target="_blank"
             rel="noreferrer"
