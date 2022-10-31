@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import { SocialIcon } from "react-social-icons";
 import { motion } from "framer-motion";
 import classnames from "classnames";
+import { SocialIcon } from "react-social-icons";
 
 import "./header.scss";
 
-const Header = () => {
+function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const closeBurgerMenu = () => {
@@ -68,20 +68,39 @@ const Header = () => {
             </ul>
           </nav>
 
-          <div className="navbar__resume" type="button">
-            <a
-              className="button"
-              href="https://github.com/AlenaGM"
-              target="_blank"
-              rel="noreferrer"
-              onClick={() => setMenuOpen(false)}
-            >
-              Resume
-            </a>
-          </div>
+          <div className="navbar__buttons">
+            <div className="navbar__resume" type="button">
+              <a
+                className="button"
+                href="https://github.com/AlenaGM"
+                target="_blank"
+                rel="noreferrer"
+                onClick={() => setMenuOpen(false)}
+              >
+                Resume
+              </a>
+            </div>
 
-          <div className={burgerIconClasses} onClick={() => openBurgerMenu()}>
-            <span />
+            <div className="navbar__social">
+              <SocialIcon
+                url="https://github.com/AlenaGM"
+                className="mr-4"
+                target="_blank"
+                fgColor="#fff"
+                style={{ height: 35, width: 35 }}
+              />
+              <SocialIcon
+                url="https://www.linkedin.com/in/alena-guillaume/"
+                className="mr-4"
+                target="_blank"
+                fgColor="#fff"
+                style={{ height: 35, width: 35 }}
+              />
+            </div>
+
+            <div className={burgerIconClasses} onClick={() => openBurgerMenu()}>
+              <span />
+            </div>
           </div>
         </div>
       </header>
@@ -131,6 +150,6 @@ const Header = () => {
       )}
     </>
   );
-};
+}
 
 export default Header;

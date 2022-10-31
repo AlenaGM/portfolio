@@ -2,6 +2,7 @@ import "./about.scss";
 
 import React, { useState, useEffect } from "react";
 import { urlFor, client } from "../../client";
+import AppWrap from "../../wrapper/AppWrap";
 
 const About = () => {
   const [author, setAuthor] = useState(null);
@@ -70,4 +71,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default AppWrap(About, "about");

@@ -1,3 +1,4 @@
+import AppWrap from "../../wrapper/AppWrap";
 import "./home.scss";
 
 import React from "react";
@@ -326,4 +327,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default AppWrap(Home, "home");

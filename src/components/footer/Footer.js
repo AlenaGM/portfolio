@@ -1,4 +1,3 @@
-import { SocialIcon } from "react-social-icons";
 import "./footer.scss";
 
 import React from "react";

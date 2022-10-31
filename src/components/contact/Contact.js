@@ -1,6 +1,7 @@
 import { SocialIcon } from "react-social-icons";
 import React, { useState } from "react";
 import { client } from "../../client";
+import AppWrap from "../../wrapper/AppWrap";
 import "./contacts.scss";
 
 const Contact = () => {
@@ -146,4 +147,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default AppWrap(Contact, "contact");

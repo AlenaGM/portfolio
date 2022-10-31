@@ -1,5 +1,6 @@
 import "./projects.scss";
 import React, { useState, useEffect } from "react";
+import AppWrap from "../../wrapper/AppWrap";
 import { motion } from "framer-motion";
 import { urlFor, client } from "../../client";
 
@@ -115,4 +116,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default AppWrap(Projects, "project");

@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import ReactTooltip from "react-tooltip";
 import { urlFor, client } from "../../client";
+import AppWrap from "../../wrapper/AppWrap";
 
 const Skills = () => {
   const [experiences, setExperiences] = useState([]);
@@ -92,4 +93,4 @@ const Skills = () => {
   );
 };
 
-export default Skills;
+export default AppWrap(Skills, "skills");
