@@ -40,7 +40,7 @@ const Contact = () => {
   };
 
   return (
-    <>
+    <section className="app__contact">
       <h2>Contact</h2>
       <h3>Get In Touch</h3>
       <div>
@@ -143,7 +143,7 @@ const Contact = () => {
           />
         </div>
       </div>
-    </>
+    </section>
   );
 };
 

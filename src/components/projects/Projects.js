@@ -38,7 +38,7 @@ const Projects = () => {
   };
 
   return (
-    <>
+    <section className="app__projects">
       <h2 className="head-text">
         My creative <span>Portfolio</span> section
       </h2>
@@ -112,7 +112,7 @@ const Projects = () => {
           </div>
         ))}
       </motion.div>
-    </>
+    </section>
   );
 };
 

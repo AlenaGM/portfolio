@@ -30,7 +30,7 @@ const Skills = () => {
   }, []);
 
   return (
-    <>
+    <section className="app__skills">
       <h2>Skills & Experience</h2>
       <div className="app__skills-container">
         <motion.div className="app__skills-list">
@@ -89,7 +89,7 @@ const Skills = () => {
 
       <h4>Currently I'm working on</h4>
       <p>Learning wordpress and revising javascript</p>
-    </>
+    </section>
   );
 };
 
