@@ -9,7 +9,7 @@ const SocialMedia = () => {
         className="mr-4"
         target="_blank"
         fgColor="#fff"
-        style={{ height: 35, width: 35 }}
+        style={{ height: 37, width: 37 }}
       />
       <SocialIcon
         url="https://www.linkedin.com/in/alena-guillaume/"

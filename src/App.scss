@@ -48,10 +48,17 @@
     a {
       margin-top: 1rem;
       cursor: pointer;
+      &:hover {
+        transform: scale(1.1, 1.1);
+      }
 
       div {
         width: 100%;
         height: 100%;
+
+        svg {
+          border: solid 1px rgba(255, 255, 255, 0.18);
+        }
       }
 
       @media screen and (min-width: 2000px) {
@@ -75,10 +82,17 @@
     a {
       margin-top: 1rem;
       cursor: pointer;
+      &:hover {
+        transform: scale(1.1, 1.1);
+      }
 
       div {
         width: 100%;
         height: 100%;
+
+        svg {
+          border: solid 1px rgba(255, 255, 255, 0.18);
+        }
       }
 
       @media screen and (min-width: 2000px) {
