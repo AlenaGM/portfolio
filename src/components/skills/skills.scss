@@ -122,6 +122,9 @@
       justify-content: flex-start;
       align-items: flex-start;
       margin-top: 1rem;
+      @media screen and (max-width: 450px) {
+        flex-direction: column;
+      }
     }
 
     &_works {
@@ -143,6 +146,10 @@
       p {
         font-weight: 600;
         color: $color-accent;
+
+        @media screen and (max-width: 450px) {
+          font-size: 0.9rem;
+        }
       }
 
       @media screen and (max-width: 450px) {
@@ -155,12 +162,22 @@
 .work_name {
   font-weight: 600;
   color: $color-accent;
+  @media screen and (max-width: 450px) {
+    margin-top: 0.15rem;
+  }
 }
 
 .work_company {
   color: $text-color;
   font-size: 0.95rem;
   font-style: italic;
+  @media screen and (min-width: 2000px) {
+    font-size: 1.75rem;
+  }
+
+  @media screen and (max-width: 450px) {
+    font-size: 0.85rem;
+  }
 }
 
 .work_description {
@@ -168,6 +185,13 @@
   margin: 5px 0px 25px 15px;
   font-size: 0.95rem;
   color: $text-color;
+  @media screen and (min-width: 2000px) {
+    font-size: 1.75rem;
+  }
+
+  @media screen and (max-width: 450px) {
+    font-size: 0.85rem;
+  }
 }
 
 .work_current {
