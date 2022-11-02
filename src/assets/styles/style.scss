@@ -10,6 +10,7 @@ body {
   background-color: $surface-color;
   color: $text-color;
   -webkit-font-smoothing: antialised;
+  min-width: 280px;
 }
 
 * {

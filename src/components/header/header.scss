@@ -248,6 +248,11 @@
   background: #2a323d;
   border: 1px solid rgba(255, 255, 255, 0.18);
 
+  @media screen and (max-width: 400px) {
+    width: 100%;
+    height: auto;
+  }
+
   &_links {
     display: flex;
     flex-direction: column;
@@ -280,6 +285,10 @@
     background-color: rgb(32, 38, 46, 0.8);
 
     @media screen and (min-width: 961px) {
+      display: none;
+    }
+
+    @media screen and (max-width: 400px) {
       display: none;
     }
   }
