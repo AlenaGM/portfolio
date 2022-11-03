@@ -1,8 +1,10 @@
-import "./projects.scss";
 import React, { useState, useEffect } from "react";
-import AppWrap from "../../wrapper/AppWrap";
+
 import { motion } from "framer-motion";
 import { urlFor, client } from "../../client";
+
+//import AppWrap from "../../wrapper/AppWrap";
+import "./projects.scss";
 
 const Projects = () => {
   const [activeFilter, setActiveFilter] = useState("All");
@@ -38,17 +40,21 @@ const Projects = () => {
   };
 
   return (
-    <section className="app__projects">
-      <h2 className="head-text">
+    <>
+      <h2 className="projects__title">
         My creative <span>Portfolio</span> section
       </h2>
-      <div className="app__work-filter">
+      <div className="projects__intro">
+        Here are the major tools I use to bring my projects to life and my
+        latest work experiences.
+      </div>
+      <div className="projects__filter">
         {["React", "Vue", "JavaScript", "Wordpress", "Components", "All"].map(
           (item, index) => (
             <div
               key={index}
               onClick={() => handleProjectFilter(item)}
-              className={`app__work-filter-item app__flex p-text ${
+              className={`projects__filter_item ${
                 activeFilter === item ? "item-active" : ""
               }`}
             >
@@ -60,60 +66,31 @@ const Projects = () => {
       <motion.div
         animate={animateCard}
         transition={{ duration: 0.5, delayChildren: 0.5 }}
-        className="app__work-portfolio"
+        className="projects__container"
       >
         {filterProject.map((project, index) => (
-          <div className="app__work-item app__flex" key={index}>
-            <div className="app__work-img app__flex">
+          <div className="projects__item" key={index}>
+            <div className="projects__item_image">
               <img src={urlFor(project.imgUrl)} alt={project.name} />
-              <motion.div
-                whileHover={{ opacity: [0, 1] }}
-                transition={{
-                  duration: 0.25,
-                  ease: "easeInOut",
-                  staggerChildren: 0.5,
-                }}
-                className="app__work-hover app__flex"
-              >
-                <a href={project.demoLink} target="_blank" rel="noreferrer">
-                  <motion.div
-                    whileInView={{ scale: [0, 1] }}
-                    whileHover={{ scale: [1, 0.9] }}
-                    transition={{ duration: 0.25 }}
-                    className="app__flex"
-                  >
-                    <div>Demo</div>
-                  </motion.div>
-                </a>
-                <a href={project.codeLink} target="_blank" rel="noreferrer">
-                  <motion.div
-                    whileInView={{ scale: [0, 1] }}
-                    whileHover={{ scale: [1, 0.9] }}
-                    transition={{ duration: 0.25 }}
-                    className="app__flex"
-                  >
-                    <div>Github</div>
-                  </motion.div>
-                </a>
-              </motion.div>
             </div>
-            <div className="app__work-content app__flex">
-              <h4 className="bold-text">{project.title}</h4>
-              <p className="italic-text" style={{ marginTop: 10 }}>
+            <div className="projects__item_content">
+              <h4 className="projects__item_title">{project.title}</h4>
+              <p className="projects__item_tech" style={{ marginTop: 10 }}>
                 {project.techStack}
               </p>
-              <p className="p-text" style={{ marginTop: 10 }}>
+              <p className="projects__item_text" style={{ marginTop: 10 }}>
                 {project.description}
               </p>
-              <div className="app__work-tag app__flex">
-                <p className="p-text">{project.tags[0]}</p>
+              <div className="projects__item_tags">
+                <p>{project.tags[0]}</p>
               </div>
             </div>
           </div>
         ))}
       </motion.div>
-    </section>
+    </>
   );
 };
 
-export default AppWrap(Projects, "project");
+export default Projects;
+//export default AppWrap(Projects, "project");
