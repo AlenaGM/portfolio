@@ -47,6 +47,11 @@
     text-align: center;
   }
 
+  &__projects {
+    width: 100%;
+    flex-direction: column;
+  }
+
   &__social {
     display: flex;
     justify-content: flex-end;
