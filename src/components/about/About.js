@@ -3,7 +3,7 @@ import "./about.scss";
 import React, { useState, useEffect } from "react";
 import { urlFor, client } from "../../client";
 import BlockContent from "@sanity/block-content-to-react";
-import AppWrap from "../../wrapper/AppWrap";
+//import AppWrap from "../../wrapper/AppWrap";
 
 const About = () => {
   const [author, setAuthor] = useState(null);
@@ -39,13 +39,18 @@ const About = () => {
             dataset="production"
           />
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. A dicta
-            eaque asperiores autem quos tempore dolores! Temporibus obcaecati
-            aspernatur vero odio quos quia aliquid voluptatibus. Consequuntur
-            accusamus enim in vel ullam perferendis officiis neque voluptatem at
-            aperiam quos similique possimus ad autem repellendus, necessitatibus
-            quasi quod id, beatae modi excepturi corporis sunt sapiente! Labore,
-            vero corporis. Sunt odio excepturi deserunt quas sit ratione facilis
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
+            a officiis suscipit error, tenetur eius et laudantium, pariatur cum
+            natus ducimus maiores iusto. Nisi aspernatur maiores consectetur?
+            Facilis exercitationem ipsam, expedita harum quibusdam debitis.
+            Dicta saepe iste deleniti inventore obcaecati nam impedit sapiente
+            nihil alias assumenda, velit fugit natus cum tenetur labore
+            repudiandae quaerat nostrum eius blanditiis sed. Atque doloremque
+            illo a molestias tempore ducimus molestiae aperiam nisi, possimus
+            porro quod ab cupiditate quaerat quis harum iusto maiores? Est cum
+            amet dicta reprehenderit odio quas nihil modi ipsa distinctio dolore
+            necessitatibus esse officia, autem expedita accusantium ut tempore.
+            Animi, tempora?
           </p>
         </div>
       </div>
@@ -53,4 +58,6 @@ const About = () => {
   );
 };
 
-export default AppWrap(About, "about");
+export default About;
+
+//export default AppWrap(About, "about");

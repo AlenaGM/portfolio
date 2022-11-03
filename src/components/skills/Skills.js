@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { urlFor, client } from "../../client";
 
-import AppWrap from "../../wrapper/AppWrap";
+//import AppWrap from "../../wrapper/AppWrap";
 import "./skills.scss";
 
 const Skills = () => {
@@ -93,4 +93,5 @@ const Skills = () => {
   );
 };
 
-export default AppWrap(Skills, "skills");
+export default Skills;
+//export default AppWrap(Skills, "skills");

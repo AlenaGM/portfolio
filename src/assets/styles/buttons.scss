@@ -20,6 +20,7 @@
   &:hover {
     background-color: $color-accent-hover;
     color: $text-color;
+    transform: scale(1.1, 1.1);
   }
   &:active {
     background-color: $color-accent-hover;

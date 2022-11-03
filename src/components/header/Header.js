@@ -69,6 +69,32 @@ function Header() {
           </nav>
 
           <div className="navbar__buttons">
+            <div className="navbar__social">
+              <SocialIcon
+                url="https://www.linkedin.com/in/alena-guillaume/"
+                fgColor="#6cc2ff"
+                bgColor="transparent"
+                style={{
+                  height: 36,
+                  width: 36,
+                  borderRadius: "50%",
+                  border: "solid 2px #6cc2ff",
+                }}
+              />
+              <SocialIcon
+                url="https://github.com/AlenaGM"
+                target="_blank"
+                fgColor="#6cc2ff"
+                bgColor="transparent"
+                style={{
+                  height: 36,
+                  width: 36,
+                  borderRadius: "50%",
+                  border: "solid 2px #6cc2ff",
+                }}
+              />
+            </div>
+
             <div className="navbar__resume" type="button">
               <a
                 className="button"
@@ -79,21 +105,6 @@ function Header() {
               >
                 Resume
               </a>
-            </div>
-
-            <div className="navbar__social">
-              <SocialIcon
-                url="https://github.com/AlenaGM"
-                target="_blank"
-                fgColor="#fff"
-                style={{ height: 37, width: 37 }}
-              />
-              <SocialIcon
-                url="https://www.linkedin.com/in/alena-guillaume/"
-                target="_blank"
-                fgColor="#fff"
-                style={{ height: 33, width: 33 }}
-              />
             </div>
 
             <div className={burgerIconClasses} onClick={() => openBurgerMenu()}>
