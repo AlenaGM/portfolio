@@ -34,6 +34,10 @@ const Skills = () => {
       <h2 className="skills__title">
         <span>Skills</span> & Experience
       </h2>
+      <div className="skills__intro">
+        Here are the major tools I use to bring my projects to life and my
+        latest work experiences.
+      </div>
       <div className="skills__container">
         <motion.div className="skills__list">
           {skills.map((skill) => (

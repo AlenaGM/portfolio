@@ -84,17 +84,15 @@ function Header() {
             <div className="navbar__social">
               <SocialIcon
                 url="https://github.com/AlenaGM"
-                className="mr-4"
                 target="_blank"
                 fgColor="#fff"
-                style={{ height: 35, width: 35 }}
+                style={{ height: 37, width: 37 }}
               />
               <SocialIcon
                 url="https://www.linkedin.com/in/alena-guillaume/"
-                className="mr-4"
                 target="_blank"
                 fgColor="#fff"
-                style={{ height: 35, width: 35 }}
+                style={{ height: 33, width: 33 }}
               />
             </div>
 

@@ -1,18 +1,16 @@
 @import "../../assets/styles/variables.scss";
 
 .skills {
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  width: 100%;
-  background-color: $color-accent;
-
   &__title {
     margin-top: 2rem;
 
     span {
       color: $text-color-accent;
     }
+  }
+
+  &__intro {
+    margin-top: 1rem;
   }
 
   &__container {
