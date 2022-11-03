@@ -38,6 +38,15 @@ const About = () => {
             projectId="process.env.REACT_APP_SANITY_PROJECT_ID"
             dataset="production"
           />
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. A dicta
+            eaque asperiores autem quos tempore dolores! Temporibus obcaecati
+            aspernatur vero odio quos quia aliquid voluptatibus. Consequuntur
+            accusamus enim in vel ullam perferendis officiis neque voluptatem at
+            aperiam quos similique possimus ad autem repellendus, necessitatibus
+            quasi quod id, beatae modi excepturi corporis sunt sapiente! Labore,
+            vero corporis. Sunt odio excepturi deserunt quas sit ratione facilis
+          </p>
         </div>
       </div>
     </>

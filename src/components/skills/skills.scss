@@ -16,15 +16,13 @@
   &__container {
     color: $text-main;
     display: flex;
-    flex-grow: 1;
     width: 100%;
-    margin: 4vw auto;
     justify-content: center;
     align-items: flex-start;
     column-gap: 2vw;
     row-gap: 4vw;
-    padding: 16px;
-    margin: 0.75rem 0;
+    padding: 1rem;
+    margin: 0.75rem auto;
     flex-direction: row;
 
     @media screen and (max-width: 900px) {
