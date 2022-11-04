@@ -55,7 +55,7 @@ const Projects = () => {
               key={index}
               onClick={() => handleProjectFilter(item)}
               className={`projects__filter_item ${
-                activeFilter === item ? "item-active" : ""
+                activeFilter === item ? `${item}_active` : item
               }`}
             >
               {item}
