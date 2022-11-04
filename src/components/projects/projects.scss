@@ -23,85 +23,95 @@
 
     &_item {
       display: inline-block;
-      font-size: 1rem;
+      font-size: 0.75rem;
       font-weight: 700;
       min-width: 1.75rem;
-      line-height: 1.75rem;
+      line-height: 1.25rem;
       text-align: center;
-      padding: 0.15rem 0.75rem;
-      border-radius: 10px;
+      padding: 0.25rem 0.75rem;
+      border-radius: 8px;
       margin: 0 0.5rem 5px 0;
       cursor: pointer;
-      transition: background-color 0.5s, border-color 0.5s;
-
-      @media screen and (min-width: 2000px) {
-        padding: 1rem 2rem;
-        border-radius: 0.85rem;
-      }
+      transition: background-color 0.3s, border-color 0.3s;
+      background-color: transparent;
+      color: $color-accent;
+      border: solid 2px $color-accent;
 
       &.React {
-        background-color: transparent;
-        color: $react-color;
-        border: solid 1px $react-color;
-        &:hover,
+        &:hover {
+          background-color: transparent;
+          color: $react-color;
+          border: solid 2px $react-color;
+        }
         &_active {
           background-color: $react-color;
           color: $surface-color;
+          border: solid 2px $react-color;
         }
       }
 
       &.Vue {
-        background-color: transparent;
-        color: $vue-color;
-        border: solid 1px $vue-color;
-        &:hover,
+        &:hover {
+          background-color: transparent;
+          color: $vue-color;
+          border: solid 2px $vue-color;
+        }
         &_active {
           background-color: $vue-color;
           color: $surface-color;
+          border: solid 2px $vue-color;
         }
       }
 
       &.JavaScript {
-        background-color: transparent;
-        color: $js-color;
-        border: solid 1px $js-color;
-        &:hover,
+        &:hover {
+          background-color: transparent;
+          color: $js-color;
+          border: solid 2px $js-color;
+        }
         &_active {
           background-color: $js-color;
           color: $surface-color;
+          border: solid 2px $js-color;
         }
       }
 
       &.Wordpress {
-        background-color: transparent;
-        color: $wpress-color;
-        border: solid 1px $wpress-color;
-        &:hover,
+        &:hover {
+          background-color: transparent;
+          color: $wpress-color;
+          border: solid 2px $wpress-color;
+        }
         &_active {
           background-color: $wpress-color;
           color: $surface-color;
+          border: solid 2px $wpress-color;
         }
       }
 
       &.Components {
-        background-color: transparent;
-        color: $component-color;
-        border: solid 1px $component-color;
-        &:hover,
+        &:hover {
+          background-color: transparent;
+          color: $component-color;
+          border: solid 2px $component-color;
+        }
         &_active {
           background-color: $component-color;
           color: $surface-color;
+          border: solid 2px $component-color;
         }
       }
 
       &.All {
-        background-color: transparent;
-        color: $all-color;
-        border: solid 1px $all-color;
-        &:hover,
+        &:hover {
+          background-color: transparent;
+          color: $all-color;
+          border: solid 2px $all-color;
+        }
         &_active {
           background-color: $all-color;
           color: $surface-color;
+          border: solid 2px $all-color;
         }
       }
     }
