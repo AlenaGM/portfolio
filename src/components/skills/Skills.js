@@ -67,15 +67,11 @@ const Skills = () => {
                       whileInView={{ opacity: [0, 1] }}
                       transition={{ duration: 0.5 }}
                       className="skills__exp_work"
-                      data-tip
-                      data-for={work.name}
                       key={work.name}
                     >
                       <h4 className="work_name">{work.name}</h4>
                       <p className="work_company">{work.company}</p>
-                      <div className="work_description" id={work.name}>
-                        {work.description}
-                      </div>
+                      <div className="work_description">{work.description}</div>
                     </motion.div>
                   </>
                 ))}
