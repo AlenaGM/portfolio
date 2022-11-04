@@ -3,7 +3,9 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { urlFor, client } from "../../client";
 
-import { TfiGithub } from "react-icons/tfi";
+import {} from "react-icons/";
+
+import { FaCat, FaGithub } from "react-icons/fa";
 
 //import AppWrap from "../../wrapper/AppWrap";
 import "./projects.scss";
@@ -72,19 +74,19 @@ const Projects = () => {
       >
         {projects &&
           filterProject.map((project, index) => (
-            <article className="projects__item" key={index}>
-              <div className="projects__item_image">
+            <article className="projects__card" key={index}>
+              <div className="projects__card_image">
                 <a href={project.demoLink} target="_blank" rel="noreferrer">
                   <img src={urlFor(project.imgUrl)} alt={project.name} />
                 </a>
               </div>
 
-              <div className="projects__item_content">
-                <div className="projects__item_tags">
+              <div className="projects__card_content">
+                <div className="projects__card_tags">
                   <p>{project.tags[0]}</p>
                 </div>
 
-                <h4 className="projects__item_title">
+                <h4 className="projects__card_title">
                   <a
                     href={project.demoLink}
                     alt={project.title}
@@ -95,30 +97,30 @@ const Projects = () => {
                   </a>
                 </h4>
 
-                <p className="projects__item_tech" style={{ marginTop: 10 }}>
+                <p className="projects__card_tech" style={{ marginTop: 10 }}>
                   <span>Tech stack:</span> {project.techStack}
                 </p>
 
-                <p className="projects__item_text" style={{ marginTop: 10 }}>
+                <p className="projects__card_text" style={{ marginTop: 10 }}>
                   {project.description}
                 </p>
 
-                <div className="project__item_links">
+                <div className="project__card_links">
                   <a
                     href={project.demoLink}
                     target="_blank"
                     rel="noreferrer"
-                    className="project__item_link"
+                    className="project__card_link"
                   >
-                    View Project: 😺
+                    View Project: <FaCat />
                   </a>
                   <a
                     href={project.codeLink}
                     target="_blank"
                     rel="noreferrer"
-                    className="project__item_link"
+                    className="project__card_link"
                   >
-                    View Code: 💻
+                    View Code: <FaGithub />
                   </a>
                 </div>
               </div>
