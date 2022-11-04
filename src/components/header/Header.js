@@ -45,7 +45,7 @@ function Header() {
                 <NavLink
                   end
                   style={({ isActive }) => ({
-                    color: isActive && "#8dd0ff",
+                    color: isActive && "#6cc2ff",
                   })}
                   to={`/`}
                 >
@@ -57,7 +57,7 @@ function Header() {
                   <NavLink
                     end
                     style={({ isActive }) => ({
-                      color: isActive && "#8dd0ff",
+                      color: isActive && "#6cc2ff",
                     })}
                     to={`/${item}`}
                   >

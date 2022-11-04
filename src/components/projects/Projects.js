@@ -3,6 +3,8 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { urlFor, client } from "../../client";
 
+import { TfiGithub } from "react-icons/tfi";
+
 //import AppWrap from "../../wrapper/AppWrap";
 import "./projects.scss";
 
@@ -42,7 +44,7 @@ const Projects = () => {
   return (
     <>
       <h2 className="projects__title">
-        My creative <span>Portfolio</span> section
+        My <span>Portfolio</span> section
       </h2>
       <div className="projects__intro">
         Here are the major tools I use to bring my projects to life and my
@@ -68,25 +70,60 @@ const Projects = () => {
         transition={{ duration: 0.5, delayChildren: 0.5 }}
         className="projects__container"
       >
-        {filterProject.map((project, index) => (
-          <div className="projects__item" key={index}>
-            <div className="projects__item_image">
-              <img src={urlFor(project.imgUrl)} alt={project.name} />
-            </div>
-            <div className="projects__item_content">
-              <h4 className="projects__item_title">{project.title}</h4>
-              <p className="projects__item_tech" style={{ marginTop: 10 }}>
-                {project.techStack}
-              </p>
-              <p className="projects__item_text" style={{ marginTop: 10 }}>
-                {project.description}
-              </p>
-              <div className="projects__item_tags">
-                <p>{project.tags[0]}</p>
+        {projects &&
+          filterProject.map((project, index) => (
+            <article className="projects__item" key={index}>
+              <div className="projects__item_image">
+                <a href={project.demoLink} target="_blank" rel="noreferrer">
+                  <img src={urlFor(project.imgUrl)} alt={project.name} />
+                </a>
               </div>
-            </div>
-          </div>
-        ))}
+
+              <div className="projects__item_content">
+                <div className="projects__item_tags">
+                  <p>{project.tags[0]}</p>
+                </div>
+
+                <h4 className="projects__item_title">
+                  <a
+                    href={project.demoLink}
+                    alt={project.title}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    {project.title}
+                  </a>
+                </h4>
+
+                <p className="projects__item_tech" style={{ marginTop: 10 }}>
+                  <span>Tech stack:</span> {project.techStack}
+                </p>
+
+                <p className="projects__item_text" style={{ marginTop: 10 }}>
+                  {project.description}
+                </p>
+
+                <div className="project__item_links">
+                  <a
+                    href={project.demoLink}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="project__item_link"
+                  >
+                    View Project: 😺
+                  </a>
+                  <a
+                    href={project.codeLink}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="project__item_link"
+                  >
+                    View Code: 💻
+                  </a>
+                </div>
+              </div>
+            </article>
+          ))}
       </motion.div>
     </>
   );
