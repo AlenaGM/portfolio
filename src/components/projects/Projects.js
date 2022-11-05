@@ -98,13 +98,11 @@ const Projects = () => {
                   </a>
                 </h4>
 
-                <p className="projects__card_tech" style={{ marginTop: 10 }}>
+                <p className="projects__card_tech">
                   <span>Tech stack:</span> {project.techStack}
                 </p>
 
-                <p className="projects__card_text" style={{ marginTop: 10 }}>
-                  {project.description}
-                </p>
+                <p className="projects__card_text">{project.description}</p>
 
                 <div className="project__card_links">
                   <a

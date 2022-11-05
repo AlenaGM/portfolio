@@ -190,11 +190,15 @@
     }
 
     &_tech {
-      span {
-        font-weight: bold;
-      }
+      font-family: "Red Hat Mono", monospace;
+      font-size: 0.85rem;
+      margin-top: 10px;
     }
+
     &_text {
+      margin-top: 20px;
+      font-size: 1rem;
+      margin-top: 20px;
     }
 
     &_tags {
@@ -222,6 +226,8 @@
     padding: 0.5rem 1.5rem 0 0;
     display: flex;
     align-content: center;
+    font-family: "Red Hat Mono", monospace;
+    font-size: 0.85rem;
     &:hover {
       color: $color-accent;
     }

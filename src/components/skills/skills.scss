@@ -80,9 +80,10 @@
       }
 
       p {
-        font-weight: 500;
         margin-top: 0.5rem;
         color: $text-color;
+        font-family: "Red Hat Mono", monospace;
+        font-size: 1rem;
       }
 
       @media screen and (min-width: 2000px) {
