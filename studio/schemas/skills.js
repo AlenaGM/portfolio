@@ -16,10 +16,5 @@ export default {
         hotspot: true,
       },
     },
-    {
-      name: "bgColor",
-      title: "Background Color",
-      type: "string",
-    },
   ],
 };

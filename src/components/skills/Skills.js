@@ -3,6 +3,8 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { urlFor, client } from "../../client";
 
+import BlockContent from "@sanity/block-content-to-react";
+
 //import AppWrap from "../../wrapper/AppWrap";
 import "./skills.scss";
 
@@ -19,7 +21,6 @@ const Skills = () => {
       .fetch(experiencesQuery)
       .then((data) => {
         setExperiences(data);
-        console.log(experiences);
       })
       .catch(console.error);
 
@@ -49,7 +50,7 @@ const Skills = () => {
               whileInView={{ opacity: [0, 1] }}
               transition={{ duration: 0.5 }}
               className="skills__list_item"
-              key={skill.name}
+              key={skill._id}
             >
               <div>
                 <img src={urlFor(skill.icon)} alt={skill.name} />
@@ -66,17 +67,22 @@ const Skills = () => {
               </div>
               <motion.div className="skills__exp_works">
                 {experience.works.map((work) => (
-                  <>
-                    <motion.div
-                      whileInView={{ opacity: [0, 1] }}
-                      transition={{ duration: 0.5 }}
-                      className="skills__exp_work"
-                      key={work._id}
-                    >
-                      <h4 className="work_name">{work.name}</h4>
-                      <p className="work_company">{work.company}</p>
-                    </motion.div>
-                  </>
+                  <motion.div
+                    whileInView={{ opacity: [0, 1] }}
+                    transition={{ duration: 0.5 }}
+                    className="skills__exp_work"
+                    key={work._id}
+                  >
+                    <h4 className="work_name">{work.name}</h4>
+                    <p className="work_company">{work.company}</p>
+                    <div className="work_description">
+                      <BlockContent
+                        blocks={work.description}
+                        projectId="process.env.REACT_APP_SANITY_PROJECT_ID"
+                        dataset="production"
+                      />
+                    </div>
+                  </motion.div>
                 ))}
               </motion.div>
             </motion.div>
