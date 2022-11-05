@@ -9,6 +9,11 @@ export default {
       type: "string",
     },
     {
+      name: "order",
+      title: "Order",
+      type: "string",
+    },
+    {
       name: "icon",
       title: "Skill Icon",
       type: "image",
