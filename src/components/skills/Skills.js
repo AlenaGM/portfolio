@@ -11,13 +11,15 @@ const Skills = () => {
   const [skills, setSkills] = useState([]);
 
   useEffect(() => {
-    const experiencesQuery = '*[_type == "experiences"]';
+    const experiencesQuery =
+      '*[_type == "experiences"] | order(year desc) { _id, year, works[]->}';
     const skillsQuery = '*[_type == "skills"]';
 
     client
       .fetch(experiencesQuery)
       .then((data) => {
         setExperiences(data);
+        console.log(experiences);
       })
       .catch(console.error);
 
@@ -34,10 +36,12 @@ const Skills = () => {
       <h2 className="skills__title">
         <span>Skills</span> & Experience
       </h2>
+
       <div className="skills__intro">
         Here are the major tools I use to bring my projects to life and my
         latest work experiences.
       </div>
+
       <div className="skills__container">
         <motion.div className="skills__list">
           {skills.map((skill) => (
@@ -56,9 +60,9 @@ const Skills = () => {
         </motion.div>
         <div className="skills__exp">
           {experiences.map((experience) => (
-            <motion.div className="skills__exp_item" key={experience.year}>
+            <motion.div className="skills__exp_item" key={experience._id}>
               <div className="skills__exp_year">
-                <p className="bold-text">{experience.year}</p>
+                <p>{experience.year}</p>
               </div>
               <motion.div className="skills__exp_works">
                 {experience.works.map((work) => (
@@ -67,18 +71,17 @@ const Skills = () => {
                       whileInView={{ opacity: [0, 1] }}
                       transition={{ duration: 0.5 }}
                       className="skills__exp_work"
-                      key={work.name}
+                      key={work._id}
                     >
                       <h4 className="work_name">{work.name}</h4>
                       <p className="work_company">{work.company}</p>
-                      <div className="work_description">{work.description}</div>
                     </motion.div>
                   </>
                 ))}
               </motion.div>
             </motion.div>
           ))}
-        </div>{" "}
+        </div>
       </div>
 
       <div className="work_current">

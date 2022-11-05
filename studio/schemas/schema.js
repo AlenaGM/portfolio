@@ -6,7 +6,7 @@ import author from "./author";
 import contact from "./contact";
 import skills from "./skills";
 import experiences from "./experiences";
-import workExperience from "./workExperience";
+import oneExperience from "./oneExperience";
 import projects from "./projects";
 
 export default createSchema({
@@ -15,7 +15,7 @@ export default createSchema({
     author,
     skills,
     experiences,
-    workExperience,
+    oneExperience,
     contact,
     projects,
     blockContent,

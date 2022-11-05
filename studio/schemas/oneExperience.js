@@ -1,5 +1,5 @@
 export default {
-  name: "workExperience",
+  name: "oneExperience",
   title: "Single Job",
   type: "document",
   fields: [
@@ -16,7 +16,15 @@ export default {
     {
       name: "description",
       title: "Job Description",
-      type: "string",
+      type: "array",
+      of: [
+        {
+          title: "Block",
+          type: "block",
+          styles: [{ title: "Normal", value: "normal" }],
+          lists: [],
+        },
+      ],
     },
   ],
 };

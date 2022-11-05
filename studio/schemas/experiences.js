@@ -12,7 +12,12 @@ export default {
       name: "works",
       title: "Works",
       type: "array",
-      of: [{ type: "workExperience" }],
+      of: [
+        {
+          type: "reference",
+          to: [{ type: "oneExperience" }],
+        },
+      ],
     },
   ],
 };
