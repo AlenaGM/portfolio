@@ -9,7 +9,7 @@ const About = () => {
   const [author, setAuthor] = useState(null);
 
   useEffect(() => {
-    const query = '*[_type == "author"]';
+    const query = '*[_type == "author"]{name, image, bio}';
 
     client
       .fetch(query)

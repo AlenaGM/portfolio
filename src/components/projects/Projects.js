@@ -17,7 +17,8 @@ const Projects = () => {
   const [filterProject, setFilterProject] = useState([]);
 
   useEffect(() => {
-    const query = '*[_type == "projects"]';
+    const query =
+      '*[_type == "projects"]{_id, title, description, imgUrl, techStack, demoLink, codeLink, tags[]}';
 
     client
       .fetch(query)
@@ -73,8 +74,8 @@ const Projects = () => {
         className="projects__container"
       >
         {projects &&
-          filterProject.map((project, index) => (
-            <article className="projects__card" key={index}>
+          filterProject.map((project) => (
+            <article className="projects__card" key={project._id}>
               <div className="projects__card_image">
                 <a href={project.demoLink} target="_blank" rel="noreferrer">
                   <img src={urlFor(project.imgUrl)} alt={project.name} />
