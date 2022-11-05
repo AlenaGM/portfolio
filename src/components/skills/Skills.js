@@ -91,7 +91,7 @@ const Skills = () => {
       </div>
 
       <div className="work_current">
-        <h4>Currently I'm working on</h4>
+        <h3>Currently I'm working on</h3>
         <p>Learning wordpress and revising javascript</p>
       </div>
     </>

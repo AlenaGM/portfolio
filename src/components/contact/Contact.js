@@ -1,7 +1,7 @@
 import { SocialIcon } from "react-social-icons";
 import React, { useState } from "react";
 import { client } from "../../client";
-import AppWrap from "../../wrapper/AppWrap";
+
 import "./contacts.scss";
 
 const Contact = () => {
@@ -10,6 +10,7 @@ const Contact = () => {
     email: "",
     message: "",
   });
+
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
 
@@ -46,7 +47,12 @@ const Contact = () => {
       <div>
         Dropping a line to say g’day, ask for my resume or see if we can build
         something amazing together? I’d love to hear from you! Fill in your info
-        in the form below and I look forward to hearing from you!
+        in the form below and I look forward to hearing from you! Lorem ipsum
+        dolor sit amet consectetur adipisicing elit. Labore id debitis in
+        architecto modi adipisci iusto accusamus aliquid ab aliquam fugiat
+        dolore harum quidem, totam illo quam. Id magni dignissimos officiis nemo
+        rerum provident, nesciunt error, corporis necessitatibus beatae incidunt
+        doloremque voluptate dolor quia facere delectus minima. Vero, sunt iste?
       </div>
       <div className="app__contact_telmail">
         <div>
@@ -135,6 +141,13 @@ const Contact = () => {
             style={{ height: 35, width: 35 }}
           />
           <SocialIcon
+            url="https://www.discord.com/Alena24433#7658/"
+            target="_blank"
+            rel="noreferrer"
+            fgColor="#fff"
+            style={{ height: 35, width: 35 }}
+          />
+          <SocialIcon
             url="https://www.instagram.com/alena_bergelv/"
             target="_blank"
             rel="noreferrer"
@@ -147,4 +160,4 @@ const Contact = () => {
   );
 };
 
-export default AppWrap(Contact, "contact");
+export default Contact;

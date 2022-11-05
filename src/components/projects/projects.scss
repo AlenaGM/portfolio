@@ -2,7 +2,7 @@
 
 .projects {
   &__title {
-    margin-top: 2rem;
+    margin-top: 2.5rem;
 
     span {
       color: $text-color-accent;
@@ -210,6 +210,8 @@
       border-radius: 10px;
       background-color: $card-bg;
       top: -35px;
+      font-family: "Red Hat Mono", monospace;
+      font-size: 0.85rem;
     }
   }
 }

@@ -83,9 +83,7 @@ const Projects = () => {
               </div>
 
               <div className="projects__card_content">
-                <div className="projects__card_tags">
-                  <p>{project.tags[0]}</p>
-                </div>
+                <div className="projects__card_tags">{project.tags[0]}</div>
 
                 <h4 className="projects__card_title">
                   <a

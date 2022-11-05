@@ -3,7 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
 import classnames from "classnames";
 import { SocialIcon } from "react-social-icons";
-
+import preventScroll from "prevent-scroll";
 import "./header.scss";
 
 function Header() {
@@ -11,14 +11,16 @@ function Header() {
 
   const closeBurgerMenu = () => {
     setMenuOpen(false);
-    document.body.style.overflow = "unset";
+    preventScroll.off();
   };
 
-  const openBurgerMenu = () => {
-    setMenuOpen(!menuOpen);
-
-    if (typeof window != "undefined" && window.document) {
-      document.body.style.overflow = "hidden";
+  const toggleBurgerIcon = () => {
+    if (menuOpen) {
+      setMenuOpen(false);
+      preventScroll.off();
+    } else {
+      setMenuOpen(true);
+      preventScroll.on();
     }
   };
 
@@ -34,7 +36,7 @@ function Header() {
           <Link to="/">
             <div className="navbar__logo">
               <h1 className="navbar__title">
-                <span>Alena</span> Frontend developer
+                <span>Alёna</span> Frontend developer
               </h1>
             </div>
           </Link>
@@ -101,13 +103,16 @@ function Header() {
                 href="https://github.com/AlenaGM"
                 target="_blank"
                 rel="noreferrer"
-                onClick={() => setMenuOpen(false)}
+                onClick={() => closeBurgerMenu()}
               >
                 Resume
               </a>
             </div>
 
-            <div className={burgerIconClasses} onClick={() => openBurgerMenu()}>
+            <div
+              className={burgerIconClasses}
+              onClick={() => toggleBurgerIcon()}
+            >
               <span />
             </div>
           </div>

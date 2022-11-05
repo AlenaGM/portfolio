@@ -2,11 +2,7 @@
 
 .skills {
   &__title {
-    margin-top: 2rem;
-
-    span {
-      color: $text-color-accent;
-    }
+    margin-top: 2.5rem;
   }
 
   &__intro {
@@ -142,8 +138,15 @@
       margin-top: 2px;
 
       p {
-        font-weight: 600;
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-size: 1.15rem;
+        font-weight: 500;
+        text-align: left;
         color: $color-accent;
+
+        @media screen and (min-width: 2000px) {
+          font-size: 2rem;
+        }
 
         @media screen and (max-width: 450px) {
           font-size: 0.9rem;
@@ -158,8 +161,8 @@
 }
 
 .work_name {
-  font-weight: 600;
   color: $color-accent;
+  margin-top: 0.15rem;
   @media screen and (max-width: 450px) {
     margin-top: 0.15rem;
   }
