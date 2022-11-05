@@ -2,7 +2,7 @@ import "./about.scss";
 
 import React, { useState, useEffect } from "react";
 import { urlFor, client } from "../../client";
-import BlockContent from "@sanity/block-content-to-react";
+import { PortableText } from "@portabletext/react";
 //import AppWrap from "../../wrapper/AppWrap";
 
 const About = () => {
@@ -33,8 +33,8 @@ const About = () => {
           </div>
         </div>
         <div className="about__presentation">
-          <BlockContent
-            blocks={author.bio}
+          <PortableText
+            value={author.bio}
             projectId="process.env.REACT_APP_SANITY_PROJECT_ID"
             dataset="production"
           />

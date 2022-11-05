@@ -1,7 +1,6 @@
 import createSchema from "part:@sanity/base/schema-creator";
 import schemaTypes from "all:part:@sanity/base/schema-type";
 
-import blockContent from "./blockContent";
 import author from "./author";
 import contact from "./contact";
 import skills from "./skills";
@@ -18,6 +17,5 @@ export default createSchema({
     oneExperience,
     contact,
     projects,
-    blockContent,
   ]),
 });

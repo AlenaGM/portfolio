@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { urlFor, client } from "../../client";
 
-import BlockContent from "@sanity/block-content-to-react";
+import { PortableText } from "@portabletext/react";
 
 //import AppWrap from "../../wrapper/AppWrap";
 import "./skills.scss";
@@ -76,8 +76,8 @@ const Skills = () => {
                     <h4 className="work_name">{work.name}</h4>
                     <p className="work_company">{work.company}</p>
                     <div className="work_description">
-                      <BlockContent
-                        blocks={work.description}
+                      <PortableText
+                        value={work.description}
                         projectId="process.env.REACT_APP_SANITY_PROJECT_ID"
                         dataset="production"
                       />

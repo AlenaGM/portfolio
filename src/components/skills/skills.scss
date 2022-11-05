@@ -168,6 +168,7 @@
   color: $text-color;
   font-size: 0.95rem;
   font-style: italic;
+  margin: 2px 0 0 2px;
   @media screen and (min-width: 2000px) {
     font-size: 1.75rem;
   }
@@ -178,10 +179,16 @@
 }
 
 .work_description {
-  font-weight: 400;
-  margin: 5px 0px 25px 15px;
-  font-size: 0.95rem;
-  color: $text-color;
+  ul {
+    font-weight: 400;
+    margin: 5px 0px 1rem 2.5rem;
+    font-size: 0.95rem;
+    color: $text-color;
+    li {
+      list-style-type: disc;
+    }
+  }
+
   @media screen and (min-width: 2000px) {
     font-size: 1.75rem;
   }
