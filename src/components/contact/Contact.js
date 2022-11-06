@@ -41,10 +41,9 @@ const Contact = () => {
   };
 
   return (
-    <section className="app__contact">
-      <h2>Contact</h2>
-      <h3>Get In Touch</h3>
-      <div>
+    <>
+      <h2 className="contact__title">Contact</h2>
+      <div className="contact__intro">
         Dropping a line to say g’day, ask for my resume or see if we can build
         something amazing together? I’d love to hear from you! Fill in your info
         in the form below and I look forward to hearing from you! Lorem ipsum
@@ -54,7 +53,7 @@ const Contact = () => {
         rerum provident, nesciunt error, corporis necessitatibus beatae incidunt
         doloremque voluptate dolor quia facere delectus minima. Vero, sunt iste?
       </div>
-      <div className="app__contact_telmail">
+      <div className="contact__phone-mail">
         <div>
           <SocialIcon
             url="mailto:alena.guillaume@yahoo.com"
@@ -80,7 +79,7 @@ const Contact = () => {
         </div>
       </div>
       {!isFormSubmitted ? (
-        <div>
+        <div className="contact__form">
           <div>
             <input
               type="text"
@@ -107,7 +106,7 @@ const Contact = () => {
               onChange={handleChangeInput}
             />
           </div>
-          <button type="button" onClick={handleSubmit}>
+          <button className="button" type="button" onClick={handleSubmit}>
             {!loading ? "Send Message" : "Sending..."}
           </button>
         </div>
@@ -118,7 +117,7 @@ const Contact = () => {
       )}
       <div>
         <p>Feeling social? Find me on these online spaces too!</p>
-        <div className="app__contact_social">
+        <div className="contact__social">
           <SocialIcon
             url="https://github.com/AlenaGM"
             target="_blank"
@@ -156,7 +155,7 @@ const Contact = () => {
           />
         </div>
       </div>
-    </section>
+    </>
   );
 };
 

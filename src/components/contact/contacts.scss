@@ -1,24 +1,58 @@
 @import "../../assets/styles/variables.scss";
+@import "../../assets/styles/buttons.scss";
 
-.app__contact {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  background-color: $color-accent;
+.contact {
+  &__title {
+    margin-top: 2.5rem;
 
-  &_telmail {
+    span {
+      color: $text-color-accent;
+    }
+  }
+
+  &__intro {
+    margin-top: 1rem;
+  }
+
+  &__phone-mail {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
     justify-content: center;
     column-gap: 2rem;
+
+    div {
+      padding: 1rem;
+      border-radius: 0.5rem;
+      background-color: $card-bg;
+      color: $text-color;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      max-width: 400px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      &:hover {
+        box-shadow: 0 0 15px rgba(144, 144, 144, 0.6);
+      }
+    }
+
     a {
       margin-left: 0.75rem;
     }
   }
 
-  &_social {
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background-color: $card-bg;
+    color: $text-color;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+  }
+
+  &__social {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
