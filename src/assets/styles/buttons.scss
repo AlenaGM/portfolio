@@ -117,8 +117,8 @@
   }
   &.All {
     &:hover {
-      color: $color-accent;
-      border: solid 2px $color-accent;
+      color: $color-hover;
+      border: solid 2px $color-hover;
       background-color: transparent;
     }
     &_active {
