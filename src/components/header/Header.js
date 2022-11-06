@@ -74,6 +74,8 @@ function Header() {
             <div className="navbar__social">
               <SocialIcon
                 url="https://www.linkedin.com/in/alena-guillaume/"
+                target="_blank"
+                rel="noreferrer"
                 fgColor="#00cccc"
                 bgColor="transparent"
                 style={{
@@ -86,6 +88,7 @@ function Header() {
               <SocialIcon
                 url="https://github.com/AlenaGM"
                 target="_blank"
+                rel="noreferrer"
                 fgColor="#00cccc"
                 bgColor="transparent"
                 style={{

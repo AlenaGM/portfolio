@@ -154,7 +154,9 @@
         a {
           margin-right: 1rem;
           &:hover {
-            transform: scale(1.1, 1.1);
+            transform: scale(1.2, 1.2);
+            border: 1px solid rgb(0, 204, 204, 0.18);
+            box-shadow: 0 0 15px rgb(0, 255, 185, 0.3);
           }
         }
 

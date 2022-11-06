@@ -61,8 +61,14 @@ const Contact = () => {
               url="mailto:alena.guillaume@yahoo.com"
               target="_blank"
               rel="noreferrer"
-              fgColor="#fff"
-              style={{ height: 35, width: 35 }}
+              fgColor="#00cccc"
+              bgColor="transparent"
+              style={{
+                height: 40,
+                width: 40,
+                borderRadius: "50%",
+                border: "solid 2px #00cccc",
+              }}
             />
             <a href="mailto:alena.guillaume@yahoo.com" className="tech-text">
               alena.guillaume@yahoo.com
@@ -74,8 +80,14 @@ const Contact = () => {
               url="tel:+1 (123) 456-7890"
               target="_blank"
               rel="noreferrer"
-              fgColor="#fff"
-              style={{ height: 35, width: 35 }}
+              fgColor="#00cccc"
+              bgColor="transparent"
+              style={{
+                height: 40,
+                width: 40,
+                borderRadius: "50%",
+                border: "solid 2px #00cccc",
+              }}
             />
             <a href="tel:+33677674552" className="tech-text">
               +33(0)6 77 67 45 52
@@ -83,33 +95,43 @@ const Contact = () => {
           </div>
         </div>
         {!isFormSubmitted ? (
-          <div className="contact__form card">
-            <input
-              type="text"
-              placeholder="Your Name"
-              name="username"
-              value={username}
-              onChange={handleChangeInput}
-            />
-            <input
-              type="email"
-              placeholder="Your Email"
-              name="email"
-              value={email}
-              onChange={handleChangeInput}
-            />
-            <textarea
-              placeholder="Your Message"
-              value={message}
-              name="message"
-              onChange={handleChangeInput}
-            />
-            <button className="button" type="button" onClick={handleSubmit}>
-              {!loading ? "Send Message" : "Sending..."}
-            </button>
-          </div>
+          <>
+            <form className="contact__form">
+              <div>
+                <input
+                  type="text"
+                  placeholder="Your Name*"
+                  name="username"
+                  value={username}
+                  onChange={handleChangeInput}
+                />
+                <input
+                  type="email"
+                  placeholder="Your Email*"
+                  name="email"
+                  value={email}
+                  onChange={handleChangeInput}
+                />
+              </div>
+              <textarea
+                placeholder="Your Message*"
+                value={message}
+                name="message"
+                onChange={handleChangeInput}
+              />
+              <button className="button" type="button" onClick={handleSubmit}>
+                {!loading ? "Send Message" : "Sending..."}
+              </button>
+            </form>
+            <div className="contact__form_disclaimer">
+              <p className="tech-text">
+                * I do not share your personal details with anyone
+              </p>
+              <p className="tech-text">** All fields are required</p>
+            </div>
+          </>
         ) : (
-          <div>
+          <div className="contact__thanks">
             <h3>Thank you for getting in touch!</h3>
           </div>
         )}
@@ -121,45 +143,52 @@ const Contact = () => {
               url="https://github.com/AlenaGM"
               target="_blank"
               rel="noreferrer"
-              fgColor="#fff"
+              fgColor="#00cccc"
+              bgColor="transparent"
               style={{
-                height: 38,
-                width: 38,
+                height: 40,
+                width: 40,
                 borderRadius: "50%",
-                border: "2px solid rgba(255, 255, 255, 0.18)",
+                border: "solid 2px #00cccc",
               }}
             />
             <SocialIcon
               url="https://www.linkedin.com/in/alena-guillaume/"
               target="_blank"
               rel="noreferrer"
-              fgColor="#fff"
+              fgColor="#00cccc"
+              bgColor="transparent"
               style={{
-                height: 36,
-                width: 36,
+                height: 40,
+                width: 40,
                 borderRadius: "50%",
+                border: "solid 2px #00cccc",
               }}
             />
             <SocialIcon
               url="https://t.me/alenagm"
               target="_blank"
               rel="noreferrer"
-              fgColor="#fff"
+              fgColor="#00cccc"
+              bgColor="transparent"
               style={{
-                height: 36,
-                width: 36,
+                height: 40,
+                width: 40,
                 borderRadius: "50%",
+                border: "solid 2px #00cccc",
               }}
             />
             <SocialIcon
               url="https://www.instagram.com/alena_bergelv/"
               target="_blank"
               rel="noreferrer"
-              fgColor="#fff"
+              fgColor="#00cccc"
+              bgColor="transparent"
               style={{
-                height: 36,
-                width: 36,
+                height: 40,
+                width: 40,
                 borderRadius: "50%",
+                border: "solid 2px #00cccc",
               }}
             />
           </div>
