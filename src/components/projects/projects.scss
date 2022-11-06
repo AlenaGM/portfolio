@@ -23,97 +23,7 @@
 
     &_item {
       display: inline-block;
-      font-size: 0.75rem;
-      font-weight: 700;
-      min-width: 1.75rem;
-      line-height: 1.25rem;
-      text-align: center;
-      padding: 0.25rem 0.75rem;
-      border-radius: 8px;
       margin: 0 0.5rem 5px 0;
-      cursor: pointer;
-      transition: background-color 0.3s, border-color 0.3s;
-      background-color: transparent;
-      color: $color-accent;
-      border: solid 2px $color-accent;
-
-      &.React {
-        &:hover {
-          background-color: transparent;
-          color: $react-color;
-          border: solid 2px $react-color;
-        }
-        &_active {
-          background-color: $react-color;
-          color: $color-bg;
-          border: solid 2px $react-color;
-        }
-      }
-
-      &.Vue {
-        &:hover {
-          background-color: transparent;
-          color: $vue-color;
-          border: solid 2px $vue-color;
-        }
-        &_active {
-          background-color: $vue-color;
-          color: $color-bg;
-          border: solid 2px $vue-color;
-        }
-      }
-
-      &.JavaScript {
-        &:hover {
-          background-color: transparent;
-          color: $js-color;
-          border: solid 2px $js-color;
-        }
-        &_active {
-          background-color: $js-color;
-          color: $color-bg;
-          border: solid 2px $js-color;
-        }
-      }
-
-      &.Wordpress {
-        &:hover {
-          background-color: transparent;
-          color: $wpress-color;
-          border: solid 2px $wpress-color;
-        }
-        &_active {
-          background-color: $wpress-color;
-          color: $color-bg;
-          border: solid 2px $wpress-color;
-        }
-      }
-
-      &.Components {
-        &:hover {
-          background-color: transparent;
-          color: $component-color;
-          border: solid 2px $component-color;
-        }
-        &_active {
-          background-color: $component-color;
-          color: $color-bg;
-          border: solid 2px $component-color;
-        }
-      }
-
-      &.All {
-        &:hover {
-          background-color: transparent;
-          color: $color-accent;
-          border: solid 2px $color-accent;
-        }
-        &_active {
-          background-color: $color-accent;
-          color: $color-bg;
-          border: solid 2px $color-accent;
-        }
-      }
     }
   }
 
@@ -130,18 +40,7 @@
     display: grid;
     grid-auto-flow: row;
     grid-template: auto 1fr/ 1fr;
-
-    padding: 1rem;
-    border-radius: 0.5rem;
-    background-color: $color-cardBg;
-    color: $color-text;
-    cursor: pointer;
-    transition: all 0.3s ease;
     max-width: 400px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    &:hover {
-      box-shadow: 0 0 15px rgba(144, 144, 144, 0.6);
-    }
 
     &_image {
       position: relative;

@@ -52,7 +52,7 @@ const Skills = () => {
               className="skills__list_item"
               key={skill._id}
             >
-              <div>
+              <div class>
                 <img src={urlFor(skill.icon)} alt={skill.name} />
               </div>
               <p>{skill.name}</p>

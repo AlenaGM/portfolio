@@ -59,7 +59,7 @@ const Projects = () => {
             <div
               key={index}
               onClick={() => handleProjectFilter(item)}
-              className={`projects__filter_item ${
+              className={`projects__filter_item button-filter ${
                 activeFilter === item ? `${item}_active` : item
               }`}
             >
@@ -75,7 +75,7 @@ const Projects = () => {
       >
         {projects &&
           filterProject.map((project) => (
-            <article className="projects__card" key={project._id}>
+            <article className="projects__card card" key={project._id}>
               <div className="projects__card_image">
                 <a href={project.demoLink} target="_blank" rel="noreferrer">
                   <img src={urlFor(project.imgUrl)} alt={project.name} />

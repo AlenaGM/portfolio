@@ -1,29 +1,131 @@
 @import "./variables";
 
 .button {
-  margin: 0;
   display: flex;
-  cursor: pointer;
-  user-select: none;
-  align-items: center;
-  vertical-align: bottom;
-  text-align: center;
-  overflow: hidden;
   position: relative;
-  color: #151515;
-  background: $color-accent;
-  border: 1px solid $color-accent;
-  padding: 0.5rem 0.75rem;
+  margin: 0;
+  overflow: hidden;
+  align-items: center;
+  text-align: center;
   font-size: 1rem;
-  transition: background-color 0.15s, border-color 0.15s, box-shadow 0.15s;
+  color: $color-bg;
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+  background: $color-accent;
+  background: linear-gradient(90deg, var($color-hover) 0%, #00e6dc 100%);
+  border: 1px solid $color-accent;
   border-radius: 4px;
+  transition: background-color 0.15s, border-color 0.15s;
+
   &:hover {
+    color: $color-bg;
     background-color: $color-hover;
-    color: $color-text;
+    border: 1px solid $color-hover;
     transform: scale(1.1, 1.1);
   }
   &:active {
     background-color: $color-hover;
-    border: 1px solid $color-text;
+  }
+}
+
+.card {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: $color-cardBg;
+  color: $color-text;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  &:hover {
+    border: 1px solid rgb(0, 204, 204, 0.18);
+    box-shadow: 0 0 15px rgb(0, 204, 204, 0.3);
+  }
+}
+
+.button-filter {
+  min-width: 1.75rem;
+  text-align: center;
+  cursor: pointer;
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1.25rem;
+  color: $color-accent;
+  padding: 0.25rem 0.75rem;
+  border: solid 2px $color-accent;
+  border-radius: 8px;
+  background-color: transparent;
+  transition: background-color 0.3s, border-color 0.3s;
+  &.React {
+    &:hover {
+      color: $react-color;
+      border: solid 2px $react-color;
+      background-color: transparent;
+    }
+    &_active {
+      color: $color-bg;
+      border: solid 2px $react-color;
+      background-color: $react-color;
+    }
+  }
+  &.Vue {
+    &:hover {
+      color: $vue-color;
+      border: solid 2px $vue-color;
+      background-color: transparent;
+    }
+    &_active {
+      color: $color-bg;
+      border: solid 2px $vue-color;
+      background-color: $vue-color;
+    }
+  }
+  &.JavaScript {
+    &:hover {
+      color: $js-color;
+      border: solid 2px $js-color;
+      background-color: transparent;
+    }
+    &_active {
+      color: $color-bg;
+      border: solid 2px $js-color;
+      background-color: $js-color;
+    }
+  }
+  &.Wordpress {
+    &:hover {
+      color: $wpress-color;
+      border: solid 2px $wpress-color;
+      background-color: transparent;
+    }
+    &_active {
+      color: $color-bg;
+      border: solid 2px $wpress-color;
+      background-color: $wpress-color;
+    }
+  }
+  &.Components {
+    &:hover {
+      color: $component-color;
+      border: solid 2px $component-color;
+      background-color: transparent;
+    }
+    &_active {
+      color: $color-bg;
+      border: solid 2px $component-color;
+      background-color: $component-color;
+    }
+  }
+  &.All {
+    &:hover {
+      color: $color-accent;
+      border: solid 2px $color-accent;
+      background-color: transparent;
+    }
+    &_active {
+      color: $color-bg;
+      border: solid 2px $color-accent;
+      background-color: $color-accent;
+      background: linear-gradient(90deg, var($color-hover) 0%, #00e6dc 100%);
+    }
   }
 }

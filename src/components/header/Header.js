@@ -47,7 +47,7 @@ function Header() {
                 <NavLink
                   end
                   style={({ isActive }) => ({
-                    color: isActive && "#6cc2ff",
+                    color: isActive && "#00cccc",
                   })}
                   to={`/`}
                 >
@@ -59,7 +59,7 @@ function Header() {
                   <NavLink
                     end
                     style={({ isActive }) => ({
-                      color: isActive && "#6cc2ff",
+                      color: isActive && "#00cccc",
                     })}
                     to={`/${item}`}
                   >
@@ -74,25 +74,25 @@ function Header() {
             <div className="navbar__social">
               <SocialIcon
                 url="https://www.linkedin.com/in/alena-guillaume/"
-                fgColor="#6cc2ff"
+                fgColor="#00cccc"
                 bgColor="transparent"
                 style={{
                   height: 36,
                   width: 36,
                   borderRadius: "50%",
-                  border: "solid 2px #6cc2ff",
+                  border: "solid 2px #00cccc",
                 }}
               />
               <SocialIcon
                 url="https://github.com/AlenaGM"
                 target="_blank"
-                fgColor="#6cc2ff"
+                fgColor="#00cccc"
                 bgColor="transparent"
                 style={{
                   height: 36,
                   width: 36,
                   borderRadius: "50%",
-                  border: "solid 2px #6cc2ff",
+                  border: "solid 2px #00cccc",
                 }}
               />
             </div>
