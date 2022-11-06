@@ -1,11 +1,8 @@
 import React, { useState, useEffect } from "react";
-
-import { motion } from "framer-motion";
-import { urlFor, client } from "../../client";
-
 import { PortableText } from "@portabletext/react";
+import { motion } from "framer-motion";
 
-//import AppWrap from "../../wrapper/AppWrap";
+import { urlFor, client } from "../../client";
 import "./skills.scss";
 
 const Skills = () => {
@@ -55,16 +52,14 @@ const Skills = () => {
               <div class>
                 <img src={urlFor(skill.icon)} alt={skill.name} />
               </div>
-              <p>{skill.name}</p>
+              <p className="tech-text">{skill.name}</p>
             </motion.div>
           ))}
         </motion.div>
         <div className="skills__exp">
           {experiences.map((experience) => (
             <motion.div className="skills__exp_item" key={experience._id}>
-              <div className="skills__exp_year">
-                <p>{experience.year}</p>
-              </div>
+              <div className="skills__exp_year">{experience.year}</div>
               <motion.div className="skills__exp_works">
                 {experience.works.map((work) => (
                   <motion.div
@@ -90,7 +85,7 @@ const Skills = () => {
         </div>
       </div>
 
-      <div className="work_current">
+      <div className="skills_current">
         <h3>Currently I'm working on</h3>
         <p>Learning wordpress and revising javascript</p>
       </div>

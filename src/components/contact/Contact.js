@@ -1,7 +1,7 @@
-import { SocialIcon } from "react-social-icons";
 import React, { useState } from "react";
-import { client } from "../../client";
+import { SocialIcon } from "react-social-icons";
 
+import { client } from "../../client";
 import "./contacts.scss";
 
 const Contact = () => {
@@ -42,16 +42,16 @@ const Contact = () => {
 
   return (
     <>
-      <h2 className="contact__title">Contact</h2>
+      <h2 className="contact__title">
+        <span>Contact. </span>Get in touch
+      </h2>
       <div className="contact__intro">
-        Dropping a line to say g’day, ask for my resume or see if we can build
-        something amazing together? I’d love to hear from you! Fill in your info
-        in the form below and I look forward to hearing from you! Lorem ipsum
-        dolor sit amet consectetur adipisicing elit. Labore id debitis in
-        architecto modi adipisci iusto accusamus aliquid ab aliquam fugiat
-        dolore harum quidem, totam illo quam. Id magni dignissimos officiis nemo
-        rerum provident, nesciunt error, corporis necessitatibus beatae incidunt
-        doloremque voluptate dolor quia facere delectus minima. Vero, sunt iste?
+        <p>
+          {" "}
+          Dropping a line to say g’day, ask for my resume or see if we can build
+          something amazing together? I’d love to hear from you! Fill in your
+          info in the form below and I look forward to hearing from you!
+        </p>
       </div>
       <div className="contact__phone-mail">
         <div>

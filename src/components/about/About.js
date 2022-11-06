@@ -1,9 +1,8 @@
-import "./about.scss";
-
 import React, { useState, useEffect } from "react";
-import { urlFor, client } from "../../client";
 import { PortableText } from "@portabletext/react";
-//import AppWrap from "../../wrapper/AppWrap";
+
+import { urlFor, client } from "../../client";
+import "./about.scss";
 
 const About = () => {
   const [author, setAuthor] = useState(null);

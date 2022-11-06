@@ -1,13 +1,9 @@
 import React, { useState, useEffect } from "react";
 
 import { motion } from "framer-motion";
-import { urlFor, client } from "../../client";
-
-import {} from "react-icons/";
-
 import { FaCat, FaGithub } from "react-icons/fa";
 
-//import AppWrap from "../../wrapper/AppWrap";
+import { urlFor, client } from "../../client";
 import "./projects.scss";
 
 const Projects = () => {
@@ -47,7 +43,7 @@ const Projects = () => {
   return (
     <>
       <h2 className="projects__title">
-        My <span>Portfolio</span> section
+        My <span>Portfolio</span>
       </h2>
       <div className="projects__intro">
         Here are the major tools I use to bring my projects to life and my
@@ -83,7 +79,9 @@ const Projects = () => {
               </div>
 
               <div className="projects__card_content">
-                <div className="projects__card_tags">{project.tags[0]}</div>
+                <div className="projects__card_tags tech-text">
+                  {project.tags[0]}
+                </div>
 
                 <h4 className="projects__card_title">
                   <a
@@ -96,8 +94,8 @@ const Projects = () => {
                   </a>
                 </h4>
 
-                <p className="projects__card_tech">
-                  <span>Tech stack:</span> {project.techStack}
+                <p className="projects__card_tech tech-text">
+                  <span className="tech-text">Stack:</span> {project.techStack}
                 </p>
 
                 <p className="projects__card_text">{project.description}</p>
@@ -129,4 +127,3 @@ const Projects = () => {
 };
 
 export default Projects;
-//export default AppWrap(Projects, "project");

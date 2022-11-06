@@ -1,10 +1,6 @@
 @import "../../assets/styles/variables.scss";
 
 .projects {
-  &__title {
-    margin-top: 2.5rem;
-  }
-
   &__intro {
     margin-top: 1rem;
   }
@@ -40,7 +36,7 @@
 
     &_image {
       position: relative;
-      padding: 0px 0px 50% 0px;
+      padding: 0px 0px 60% 0px;
       margin: 0px 0px 12px 0px;
 
       img {
@@ -62,38 +58,22 @@
     }
 
     &_content {
+      position: relative;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       padding: 0.5rem;
       width: 100%;
-      position: relative;
-      flex-direction: column;
     }
 
     &_title {
-      color: $color-accent;
       margin-top: 0.5rem;
       line-height: 1.5;
-      &:hover {
-        color: $color-accent;
-      }
-
-      @media screen and (min-width: 2000px) {
-        margin-top: 3rem;
-      }
-    }
-
-    &_tech {
-      font-family: "Red Hat Mono", monospace;
-      font-size: 0.85rem;
-      margin-top: 10px;
     }
 
     &_text {
-      margin-top: 20px;
-      font-size: 1rem;
-      margin-top: 20px;
+      margin: 0.5rem 0;
     }
 
     &_tags {
@@ -104,9 +84,7 @@
       padding: 0.5rem 1rem;
       border-radius: 10px;
       background-color: $color-cardBg;
-      top: -35px;
-      font-family: "Red Hat Mono", monospace;
-      font-size: 0.85rem;
+      top: -45px;
     }
   }
 }
@@ -120,17 +98,21 @@
 
   .project__card_link {
     position: relative;
-    padding: 0.5rem 1.5rem 0 0;
     display: flex;
     align-content: center;
     font-family: "Red Hat Mono", monospace;
     font-size: 0.85rem;
-    &:hover {
-      color: $color-accent;
-    }
+    padding: 0.5rem 1.5rem 0 0;
 
     svg {
       margin-left: 0.25rem;
+    }
+
+    &:hover {
+      color: $color-hover;
+      svg {
+        fill: $color-hover;
+      }
     }
   }
 }
