@@ -22,7 +22,7 @@
     max-width: 1280px;
     margin: 0 auto;
     padding: 0.5rem 1rem;
-    color: $link-color;
+    color: $color-menu;
     z-index: 7;
 
     &__logo {
@@ -66,14 +66,14 @@
         font-family: "Red Hat Mono", monospace;
         font-weight: 500;
         font-size: 1.75rem;
-        color: $text-color-accent;
+        color: $color-accent;
         &:hover {
           color: $color-accent;
         }
       }
 
       &:hover {
-        color: $text-color;
+        color: $color-text;
       }
     }
 
@@ -96,7 +96,7 @@
         align-items: center;
         padding: 1rem;
         font-size: 1.15rem;
-        color: $link-color;
+        color: $color-menu;
         text-transform: capitalize;
         border-radius: 4px;
         cursor: pointer;
@@ -111,7 +111,7 @@
 
         a {
           flex-direction: column;
-          color: $link-color;
+          color: $color-menu;
           text-decoration: none;
           transition: all 0.3s ease-in-out;
         }
@@ -182,7 +182,7 @@
           height: 14%;
           width: 100%;
           transition: all 0.3s ease 0s;
-          background-color: $link-color;
+          background-color: $color-menu;
           border-radius: 4px;
         }
 

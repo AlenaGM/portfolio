@@ -10,7 +10,7 @@
   }
 
   &__container {
-    color: $text-color;
+    color: $color-text;
     display: flex;
     width: 100%;
     justify-content: center;
@@ -52,7 +52,7 @@
         width: 90px;
         height: 90px;
         border-radius: 50%;
-        background: $card-bg;
+        background: $color-cardBg;
         border: 1px solid rgba(255, 255, 255, 0.18);
 
         img {
@@ -77,7 +77,7 @@
 
       p {
         margin-top: 0.5rem;
-        color: $text-color;
+        color: $color-text;
         font-family: "Red Hat Mono", monospace;
         font-size: 1rem;
       }
@@ -169,7 +169,7 @@
 }
 
 .work_company {
-  color: $text-color;
+  color: $color-text;
   font-size: 0.95rem;
   font-style: italic;
   margin: 2px 0 0 2px;
@@ -187,7 +187,7 @@
     font-weight: 400;
     margin: 5px 0px 1rem 2.5rem;
     font-size: 0.95rem;
-    color: $text-color;
+    color: $color-text;
     li {
       list-style-type: disc;
     }
@@ -211,6 +211,6 @@
 
   h4 {
     margin: 1rem 0;
-    color: $text-color-accent;
+    color: $color-accent;
   }
 }

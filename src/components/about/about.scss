@@ -5,12 +5,12 @@
     margin-top: 2.5rem;
 
     span {
-      color: $text-color-accent;
+      color: $color-accent;
     }
   }
 
   &__container {
-    color: $text-color;
+    color: $color-text;
     display: flex;
     width: 100%;
     justify-content: center;

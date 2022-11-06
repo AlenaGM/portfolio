@@ -5,7 +5,7 @@
     margin-top: 2.5rem;
 
     span {
-      color: $text-color-accent;
+      color: $color-accent;
     }
   }
 
@@ -45,7 +45,7 @@
         }
         &_active {
           background-color: $react-color;
-          color: $surface-color;
+          color: $color-bg;
           border: solid 2px $react-color;
         }
       }
@@ -58,7 +58,7 @@
         }
         &_active {
           background-color: $vue-color;
-          color: $surface-color;
+          color: $color-bg;
           border: solid 2px $vue-color;
         }
       }
@@ -71,7 +71,7 @@
         }
         &_active {
           background-color: $js-color;
-          color: $surface-color;
+          color: $color-bg;
           border: solid 2px $js-color;
         }
       }
@@ -84,7 +84,7 @@
         }
         &_active {
           background-color: $wpress-color;
-          color: $surface-color;
+          color: $color-bg;
           border: solid 2px $wpress-color;
         }
       }
@@ -97,7 +97,7 @@
         }
         &_active {
           background-color: $component-color;
-          color: $surface-color;
+          color: $color-bg;
           border: solid 2px $component-color;
         }
       }
@@ -110,7 +110,7 @@
         }
         &_active {
           background-color: $color-accent;
-          color: $surface-color;
+          color: $color-bg;
           border: solid 2px $color-accent;
         }
       }
@@ -133,8 +133,8 @@
 
     padding: 1rem;
     border-radius: 0.5rem;
-    background-color: $card-bg;
-    color: $text-color;
+    background-color: $color-cardBg;
+    color: $color-text;
     cursor: pointer;
     transition: all 0.3s ease;
     max-width: 400px;
@@ -181,7 +181,7 @@
       margin-top: 0.5rem;
       line-height: 1.5;
       &:hover {
-        color: $text-color-accent;
+        color: $color-accent;
       }
 
       @media screen and (min-width: 2000px) {
@@ -208,7 +208,7 @@
       position: absolute;
       padding: 0.5rem 1rem;
       border-radius: 10px;
-      background-color: $card-bg;
+      background-color: $color-cardBg;
       top: -35px;
       font-family: "Red Hat Mono", monospace;
       font-size: 0.85rem;

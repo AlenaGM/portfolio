@@ -6,7 +6,7 @@
     margin-top: 2.5rem;
 
     span {
-      color: $text-color-accent;
+      color: $color-accent;
     }
   }
 
@@ -25,8 +25,8 @@
     div {
       padding: 1rem;
       border-radius: 0.5rem;
-      background-color: $card-bg;
-      color: $text-color;
+      background-color: $color-cardBg;
+      color: $color-text;
       cursor: pointer;
       transition: all 0.3s ease;
       max-width: 400px;
@@ -47,8 +47,8 @@
     align-items: center;
     padding: 1rem;
     border-radius: 0.5rem;
-    background-color: $card-bg;
-    color: $text-color;
+    background-color: $color-cardBg;
+    color: $color-text;
     border: 1px solid rgba(255, 255, 255, 0.18);
   }
 
