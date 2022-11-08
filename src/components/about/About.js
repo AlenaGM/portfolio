@@ -43,13 +43,6 @@ const About = () => {
             natus ducimus maiores iusto. Nisi aspernatur maiores consectetur?
             Facilis exercitationem ipsam, expedita harum quibusdam debitis.
             Dicta saepe iste deleniti inventore obcaecati nam impedit sapiente
-            nihil alias assumenda, velit fugit natus cum tenetur labore
-            repudiandae quaerat nostrum eius blanditiis sed. Atque doloremque
-            illo a molestias tempore ducimus molestiae aperiam nisi, possimus
-            porro quod ab cupiditate quaerat quis harum iusto maiores? Est cum
-            amet dicta reprehenderit odio quas nihil modi ipsa distinctio dolore
-            necessitatibus esse officia, autem expedita accusantium ut tempore.
-            Animi, tempora?
           </p>
         </div>
       </div>
