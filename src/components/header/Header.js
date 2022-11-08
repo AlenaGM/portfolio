@@ -29,6 +29,9 @@ function Header() {
     active: menuOpen,
   });
 
+  const resumeLink =
+    "https://github.com/AlenaGM/AlenaGM/blob/200cebfd17f896933342cc60ad94ac663c4219f2/CV_Alena%20Guillaume_Frontend.pdf/";
+
   return (
     <>
       <header className="app__header">
@@ -103,7 +106,7 @@ function Header() {
             <div className="navbar__resume" type="button">
               <a
                 className="button"
-                href="https://github.com/AlenaGM"
+                href={resumeLink}
                 target="_blank"
                 rel="noreferrer"
                 onClick={() => closeBurgerMenu()}
@@ -149,7 +152,7 @@ function Header() {
               <li>
                 <a
                   className="button"
-                  href="https://github.com/AlenaGM"
+                  href={resumeLink}
                   target="_blank"
                   rel="noreferrer"
                   onClick={() => closeBurgerMenu()}

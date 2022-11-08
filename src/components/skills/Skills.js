@@ -11,8 +11,8 @@ const Skills = () => {
 
   useEffect(() => {
     const experiencesQuery =
-      '*[_type == "experiences"] | order(year desc) { _id, year, works[]->}';
-    const skillsQuery = '*[_type == "skills"] | order(order) {_id, icon, name}';
+      '*[_type == "experiences"] | order(year desc) {year, works[]->}';
+    const skillsQuery = '*[_type == "skills"] | order(order) {icon, name}';
 
     client
       .fetch(experiencesQuery)
@@ -30,7 +30,7 @@ const Skills = () => {
   }, []);
 
   return (
-    <>
+    <div>
       <h2 className="skills__title">
         <span>Skills</span> & Experience
       </h2>
@@ -43,12 +43,12 @@ const Skills = () => {
       <motion.div
         className="skills__container"
         whileInView={{ opacity: [0, 1] }}
-        transition={{ duration: 1 }}
+        transition={{ duration: 0.5 }}
       >
         <div className="skills__list">
           {skills.map((skill) => (
-            <div className="skills__list_item" key={skill._id}>
-              <div class>
+            <div className="skills__list_item" key={skill.name}>
+              <div>
                 <img src={urlFor(skill.icon)} alt={skill.name} />
               </div>
               <p className="tech-text">{skill.name}</p>
@@ -57,11 +57,11 @@ const Skills = () => {
         </div>
         <div className="skills__exp">
           {experiences.map((experience) => (
-            <div className="skills__exp_item" key={experience._id}>
+            <div className="skills__exp_item" key={experience.year}>
               <div className="skills__exp_year">{experience.year}</div>
               <div className="skills__exp_works">
                 {experience.works.map((work) => (
-                  <div className="skills__exp_work" key={work._id}>
+                  <div className="skills__exp_work" key={work.name}>
                     <h4 className="work_name">{work.name}</h4>
                     <p className="work_company">{work.company}</p>
                     <div className="work_description">
@@ -83,9 +83,8 @@ const Skills = () => {
         <h3>Currently I'm working on</h3>
         <p>Learning wordpress and revising javascript</p>
       </div>
-    </>
+    </div>
   );
 };
 
 export default Skills;
-//export default AppWrap(Skills, "skills");

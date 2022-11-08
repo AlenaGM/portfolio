@@ -6,22 +6,34 @@ import "./contacts.scss";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
+    name: " ",
+    email: " ",
+    message: " ",
   });
 
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
 
   const { username, email, message } = formData;
+  const empty = !username || !email || !message;
 
   const handleChangeInput = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+    setFormData({
+      ...formData,
+      [e.target.dataset.name]: e.target.value.toLowerCase(),
+    });
+  };
+
+  const clearForm = () => {
+    setFormData({
+      name: " ",
+      email: " ",
+      message: " ",
+    });
   };
 
   const handleSubmit = () => {
+    if (empty) return;
     setLoading(true);
 
     const contact = {
@@ -36,6 +48,7 @@ const Contact = () => {
       .then(() => {
         setLoading(false);
         setIsFormSubmitted(true);
+        clearForm();
       })
       .catch((err) => console.log(err));
   };
@@ -101,22 +114,22 @@ const Contact = () => {
                 <input
                   type="text"
                   placeholder="Your Name*"
-                  name="username"
-                  value={username}
+                  data-name="username"
+                  value={username || ""}
                   onChange={handleChangeInput}
                 />
                 <input
                   type="email"
                   placeholder="Your Email*"
-                  name="email"
-                  value={email}
+                  data-name="email"
+                  value={email || ""}
                   onChange={handleChangeInput}
                 />
               </div>
               <textarea
                 placeholder="Your Message*"
-                value={message}
-                name="message"
+                value={message || ""}
+                data-name="message"
                 onChange={handleChangeInput}
               />
               <button className="button" type="button" onClick={handleSubmit}>

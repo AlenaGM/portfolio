@@ -1,7 +1,7 @@
-import React from "react";
+import { SpinnerCircle } from "./SpinnerCircle.js";
 
 const Spinner = () => {
-  return <div>Spinner</div>;
+  return SpinnerCircle;
 };
 
 export default Spinner;
