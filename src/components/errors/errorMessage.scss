@@ -1,1 +1,31 @@
 @import "../../assets/styles/variables.scss";
+
+.errorMessage,
+.nothingToShow {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  width: 100%;
+  max-width: 1000px;
+  margin: 4vw auto;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+
+  p {
+    text-align: center;
+    font-weight: bold;
+    font-size: calc(14px + 2vmin);
+    color: #fb7575;
+    margin-top: 12px;
+  }
+}
+
+.error_img {
+  display: block;
+  width: 90%;
+  max-width: 400px;
+  object-fit: contain;
+  margin: 0 auto 20px auto;
+  border-radius: 8px;
+}

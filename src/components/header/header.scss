@@ -8,8 +8,8 @@
   right: 0;
   z-index: 9;
   background: rgb(52, 62, 77, 0.85);
-  backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.18);
 
   .navbar {
@@ -28,7 +28,7 @@
     &__logo {
       display: flex;
       flex-direction: row;
-      font-weight: 700;
+      font-weight: 600;
       text-decoration: none;
 
       img {
@@ -57,7 +57,7 @@
       justify-content: center;
       align-items: flex-start;
       font-family: "Open Sans", sans-serif;
-      font-weight: 500;
+      font-weight: 400;
       font-size: 0.8rem;
       text-align: left;
       line-height: 1;

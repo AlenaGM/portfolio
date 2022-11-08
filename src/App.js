@@ -17,10 +17,10 @@ import "./App.scss";
 
 function App() {
   return (
-    <DataContextProvider>
-      <BrowserRouter>
-        <div className="app" id="app">
-          <Header />
+    <BrowserRouter>
+      <div className="app" id="app">
+        <Header />
+        <DataContextProvider>
           <main className="main">
             <Routes>
               <Route path="/" element={<HomePage />} />
@@ -31,10 +31,10 @@ function App() {
               <Route path="/*" element={<Page404 />} />
             </Routes>
           </main>
-          <Footer />
-        </div>
-      </BrowserRouter>
-    </DataContextProvider>
+        </DataContextProvider>
+        <Footer />
+      </div>
+    </BrowserRouter>
   );
 }
 

@@ -1,5 +1,4 @@
 import { PortableText } from "@portabletext/react";
-import { motion } from "framer-motion";
 
 import { urlFor } from "../../client";
 import "./skills.scss";
@@ -16,11 +15,7 @@ const Skills = ({ skills, experiences }) => {
         latest work experiences.
       </div>
 
-      <motion.div
-        className="skills__container"
-        whileInView={{ opacity: [0, 1] }}
-        transition={{ duration: 0.5 }}
-      >
+      <div className="skills__container">
         <div className="skills__list">
           {skills.map((skill) => (
             <div className="skills__list_item" key={skill.name}>
@@ -53,7 +48,7 @@ const Skills = ({ skills, experiences }) => {
             </div>
           ))}
         </div>
-      </motion.div>
+      </div>
 
       <div className="skills_current">
         <h3>Currently I'm working on</h3>

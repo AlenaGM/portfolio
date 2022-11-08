@@ -1,12 +1,16 @@
 import { useContext } from "react";
+
 import { DataContext } from "../context/DataContext";
 import About from "../components/about/About";
+import Spinner from "../components/spinner/Spinner";
+import NothingToShow from "../components/errors/NothingToShow";
 
 const AboutPage = () => {
+  console.log("render about");
   const { errors, loading, author } = useContext(DataContext);
 
-  const spinner = loading ? <div>spinner</div> : null;
-  const error = errors ? <div>error</div> : null;
+  const spinner = loading ? <Spinner /> : null;
+  const error = errors ? <NothingToShow /> : null;
   const content = !(loading || errors) ? <About author={author} /> : null;
 
   return (

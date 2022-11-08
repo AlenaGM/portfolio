@@ -1,5 +1,4 @@
 import { PortableText } from "@portabletext/react";
-
 import { urlFor } from "../../client";
 import "./about.scss";
 

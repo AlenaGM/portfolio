@@ -1,9 +1,13 @@
+import img from "../../assets/images/error.gif";
 import "./errorMessage.scss";
 
-import React from "react";
-
 const ErrorMessage = () => {
-  return <div>ErrorMessage</div>;
+  return (
+    <>
+      <img className="error_img" src={img} alt="Error" />
+      <p>This page doesn't exist</p>
+    </>
+  );
 };
 
 export default ErrorMessage;

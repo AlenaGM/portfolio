@@ -10,6 +10,7 @@ function DataContextProvider(props) {
   const [experiences, setExperiences] = useState([]);
   const [skills, setSkills] = useState([]);
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
+
   const [loading, setLoading] = useState(true);
   const [errors, setError] = useState(false);
 
@@ -28,11 +29,11 @@ function DataContextProvider(props) {
   }, []);
 
   const getAuthor = () => {
-    setLoading(true);
     client
       .fetch(authorQuery)
       .then((data) => {
         setAuthor(data[0]);
+        console.log("getAuthor");
       })
       .catch((errors) => setError(errors))
       .finally(() => {
@@ -41,11 +42,11 @@ function DataContextProvider(props) {
   };
 
   const getSkills = () => {
-    setLoading(true);
     client
       .fetch(skillsQuery)
       .then((data) => {
         setSkills(data);
+        console.log("getSkills");
       })
       .catch((errors) => setError(errors))
       .finally(() => {
@@ -58,6 +59,7 @@ function DataContextProvider(props) {
       .fetch(experiencesQuery)
       .then((data) => {
         setExperiences(data);
+        console.log("getExperiences");
       })
       .catch((errors) => setError(errors))
       .finally(() => {
@@ -71,6 +73,7 @@ function DataContextProvider(props) {
       .then((data) => {
         setProjects(data);
         setFilterProject(data);
+        console.log("getProjects");
       })
       .catch((errors) => setError(errors))
       .finally(() => {
@@ -91,8 +94,9 @@ function DataContextProvider(props) {
       .then(() => {
         setLoading(false);
         setIsFormSubmitted(true);
+        console.log("sendForm");
       })
-      .catch((err) => console.log(err));
+      .catch(console.error);
   };
 
   return (
@@ -106,10 +110,6 @@ function DataContextProvider(props) {
         loading,
         errors,
         isFormSubmitted,
-        setAuthor,
-        setSkills,
-        setExperiences,
-        setProjects,
         setFilterProject,
         sendForm,
       }}

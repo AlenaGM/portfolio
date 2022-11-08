@@ -1,12 +1,15 @@
 import { useContext } from "react";
 import { DataContext } from "../context/DataContext";
 import Skills from "../components/skills/Skills";
+import Spinner from "../components/spinner/Spinner";
+import NothingToShow from "../components/errors/NothingToShow";
 
 const SkillsPage = () => {
+  console.log("render skills");
   const { errors, loading, skills, experiences } = useContext(DataContext);
 
-  const spinner = loading ? <div>spinner</div> : null;
-  const error = errors ? <div>error</div> : null;
+  const spinner = loading ? <Spinner /> : null;
+  const error = errors ? <NothingToShow /> : null;
   const content = !(loading || errors) ? (
     <Skills skills={skills} experiences={experiences} />
   ) : null;
