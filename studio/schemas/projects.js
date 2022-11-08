@@ -37,6 +37,11 @@ export default {
       type: "url",
     },
     {
+      name: "date",
+      title: "Finished on",
+      type: "datetime",
+    },
+    {
       name: "tags",
       title: "Tags",
       type: "array",

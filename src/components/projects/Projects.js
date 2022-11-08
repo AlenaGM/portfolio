@@ -14,7 +14,7 @@ const Projects = () => {
 
   useEffect(() => {
     const query =
-      '*[_type == "projects"]{_id, title, description, imgUrl, techStack, demoLink, codeLink, tags[]}';
+      '*[_type == "projects"] | order(date desc) {_id, title, description, imgUrl, techStack, demoLink, codeLink, tags[]}';
 
     client
       .fetch(query)

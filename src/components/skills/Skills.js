@@ -40,34 +40,28 @@ const Skills = () => {
         latest work experiences.
       </div>
 
-      <div className="skills__container">
-        <motion.div className="skills__list">
+      <motion.div
+        className="skills__container"
+        whileInView={{ opacity: [0, 1] }}
+        transition={{ duration: 1 }}
+      >
+        <div className="skills__list">
           {skills.map((skill) => (
-            <motion.div
-              whileInView={{ opacity: [0, 1] }}
-              transition={{ duration: 0.5 }}
-              className="skills__list_item"
-              key={skill._id}
-            >
+            <div className="skills__list_item" key={skill._id}>
               <div class>
                 <img src={urlFor(skill.icon)} alt={skill.name} />
               </div>
               <p className="tech-text">{skill.name}</p>
-            </motion.div>
+            </div>
           ))}
-        </motion.div>
+        </div>
         <div className="skills__exp">
           {experiences.map((experience) => (
-            <motion.div className="skills__exp_item" key={experience._id}>
+            <div className="skills__exp_item" key={experience._id}>
               <div className="skills__exp_year">{experience.year}</div>
-              <motion.div className="skills__exp_works">
+              <div className="skills__exp_works">
                 {experience.works.map((work) => (
-                  <motion.div
-                    whileInView={{ opacity: [0, 1] }}
-                    transition={{ duration: 0.5 }}
-                    className="skills__exp_work"
-                    key={work._id}
-                  >
+                  <div className="skills__exp_work" key={work._id}>
                     <h4 className="work_name">{work.name}</h4>
                     <p className="work_company">{work.company}</p>
                     <div className="work_description">
@@ -77,13 +71,13 @@ const Skills = () => {
                         dataset="production"
                       />
                     </div>
-                  </motion.div>
+                  </div>
                 ))}
-              </motion.div>
-            </motion.div>
+              </div>
+            </div>
           ))}
         </div>
-      </div>
+      </motion.div>
 
       <div className="skills_current">
         <h3>Currently I'm working on</h3>
