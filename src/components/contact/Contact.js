@@ -1,18 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { DataContext } from "../../context/DataContext";
 import { SocialIcon } from "react-social-icons";
 
-import { client } from "../../client";
 import "./contacts.scss";
 
 const Contact = () => {
+  const { sendForm, isFormSubmitted, loading } = useContext(DataContext);
+
   const [formData, setFormData] = useState({
     name: " ",
     email: " ",
     message: " ",
   });
-
-  const [isFormSubmitted, setIsFormSubmitted] = useState(false);
-  const [loading, setLoading] = useState(false);
 
   const { username, email, message } = formData;
   const empty = !username || !email || !message;
@@ -34,23 +33,8 @@ const Contact = () => {
 
   const handleSubmit = () => {
     if (empty) return;
-    setLoading(true);
-
-    const contact = {
-      _type: "contact",
-      name: formData.username,
-      email: formData.email,
-      message: formData.message,
-    };
-
-    client
-      .create(contact)
-      .then(() => {
-        setLoading(false);
-        setIsFormSubmitted(true);
-        clearForm();
-      })
-      .catch((err) => console.log(err));
+    sendForm(formData);
+    clearForm();
   };
 
   return (

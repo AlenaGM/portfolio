@@ -1,29 +1,16 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useContext } from "react";
 
 import { motion } from "framer-motion";
 import { FaCat, FaGithub } from "react-icons/fa";
 
-import { urlFor, client } from "../../client";
+import { urlFor } from "../../client";
 import "./projects.scss";
+import { DataContext } from "../../context/DataContext";
 
 const Projects = () => {
+  const { projects, filterProject, setFilterProject } = useContext(DataContext);
   const [activeFilter, setActiveFilter] = useState("All");
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
-  const [projects, setProjects] = useState([]);
-  const [filterProject, setFilterProject] = useState([]);
-
-  useEffect(() => {
-    const query =
-      '*[_type == "projects"] | order(date desc) {_id, title, description, imgUrl, techStack, demoLink, codeLink, tags[]}';
-
-    client
-      .fetch(query)
-      .then((data) => {
-        setProjects(data);
-        setFilterProject(data);
-      })
-      .catch(console.error);
-  }, []);
 
   const handleProjectFilter = (item) => {
     setActiveFilter(item);
@@ -77,12 +64,10 @@ const Projects = () => {
                   <img src={urlFor(project.imgUrl)} alt={project.name} />
                 </a>
               </div>
-
               <div className="projects__card_content">
                 <div className="projects__card_tags tech-text">
                   {project.tags[0]}
                 </div>
-
                 <h4 className="projects__card_title">
                   <a
                     href={project.demoLink}
@@ -93,13 +78,10 @@ const Projects = () => {
                     {project.title}
                   </a>
                 </h4>
-
                 <p className="projects__card_tech tech-text">
                   <span className="tech-text">Stack:</span> {project.techStack}
                 </p>
-
                 <p className="projects__card_text">{project.description}</p>
-
                 <div className="project__card_links">
                   <a
                     href={project.demoLink}

@@ -1,30 +1,11 @@
-import React, { useState, useEffect } from "react";
 import { PortableText } from "@portabletext/react";
 
-import { urlFor, client } from "../../client";
+import { urlFor } from "../../client";
 import "./about.scss";
 
-const About = () => {
-  const [author, setAuthor] = useState(null);
-
-  useEffect(() => {
-    const query = '*[_type == "author"]{name, image, bio}';
-
-    client
-      .fetch(query)
-      .then((data) => {
-        setAuthor(data[0]);
-      })
-      .catch(console.error);
-  }, []);
-
-  if (!author) return <div>Loading...</div>;
-
+const About = ({ author }) => {
   return (
     <>
-      <h2 className="about__title">
-        Hi there. My name is <span>{author.name}</span>
-      </h2>
       <div className="about__container">
         <div className="about__portrait">
           <div>
@@ -32,6 +13,9 @@ const About = () => {
           </div>
         </div>
         <div className="about__presentation">
+          <h2 className="about__title">
+            Hi. My name is <span>{author.name}</span>
+          </h2>
           <PortableText
             value={author.bio}
             projectId="process.env.REACT_APP_SANITY_PROJECT_ID"
@@ -51,5 +35,3 @@ const About = () => {
 };
 
 export default About;
-
-//export default AppWrap(About, "about");

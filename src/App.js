@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import DataContextProvider from "./context/DataContext";
 import "./App.scss";
 
 import {
@@ -16,22 +17,24 @@ import "./App.scss";
 
 function App() {
   return (
-    <BrowserRouter>
-      <div className="app" id="app">
-        <Header />
-        <main className="main">
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/about" element={<AboutPage />} />
-            <Route path="/skills" element={<SkillsPage />} />
-            <Route path="/projects" element={<ProjectsPage />} />
-            <Route path="/contact" element={<ContactPage />} />
-            <Route path="/*" element={<Page404 />} />
-          </Routes>
-        </main>
-        <Footer />
-      </div>
-    </BrowserRouter>
+    <DataContextProvider>
+      <BrowserRouter>
+        <div className="app" id="app">
+          <Header />
+          <main className="main">
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/about" element={<AboutPage />} />
+              <Route path="/skills" element={<SkillsPage />} />
+              <Route path="/projects" element={<ProjectsPage />} />
+              <Route path="/contact" element={<ContactPage />} />
+              <Route path="/*" element={<Page404 />} />
+            </Routes>
+          </main>
+          <Footer />
+        </div>
+      </BrowserRouter>
+    </DataContextProvider>
   );
 }
 
