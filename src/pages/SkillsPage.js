@@ -5,7 +5,6 @@ import Spinner from "../components/spinner/Spinner";
 import NothingToShow from "../components/errors/NothingToShow";
 
 const SkillsPage = () => {
-  console.log("render skills");
   const { errors, loading, skills, experiences } = useContext(DataContext);
 
   const spinner = loading ? <Spinner /> : null;

@@ -5,7 +5,6 @@ import Spinner from "../components/spinner/Spinner";
 import NothingToShow from "../components/errors/NothingToShow";
 
 const ProjectsPage = () => {
-  console.log("render projects");
   const { errors, loading, projects } = useContext(DataContext);
 
   const spinner = loading ? <Spinner /> : null;

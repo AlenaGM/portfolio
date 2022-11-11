@@ -14,7 +14,7 @@ function DataContextProvider(props) {
   const [loading, setLoading] = useState(true);
   const [errors, setError] = useState(false);
 
-  const authorQuery = '*[_type == "author"]{name, image, bio}';
+  const authorQuery = '*[_type == "author"]{name, pitch, image, bio}';
   const skillsQuery = '*[_type == "skills"] | order(order) {icon, name}';
   const experiencesQuery =
     '*[_type == "experiences"] | order(year desc) {year, works[]->}';
@@ -33,7 +33,6 @@ function DataContextProvider(props) {
       .fetch(authorQuery)
       .then((data) => {
         setAuthor(data[0]);
-        console.log("getAuthor");
       })
       .catch((errors) => setError(errors))
       .finally(() => {
@@ -46,7 +45,6 @@ function DataContextProvider(props) {
       .fetch(skillsQuery)
       .then((data) => {
         setSkills(data);
-        console.log("getSkills");
       })
       .catch((errors) => setError(errors))
       .finally(() => {
@@ -59,7 +57,6 @@ function DataContextProvider(props) {
       .fetch(experiencesQuery)
       .then((data) => {
         setExperiences(data);
-        console.log("getExperiences");
       })
       .catch((errors) => setError(errors))
       .finally(() => {
@@ -73,7 +70,6 @@ function DataContextProvider(props) {
       .then((data) => {
         setProjects(data);
         setFilterProject(data);
-        console.log("getProjects");
       })
       .catch((errors) => setError(errors))
       .finally(() => {
@@ -94,9 +90,8 @@ function DataContextProvider(props) {
       .then(() => {
         setLoading(false);
         setIsFormSubmitted(true);
-        console.log("sendForm");
       })
-      .catch(console.error);
+      .catch((errors) => setError(errors));
   };
 
   return (

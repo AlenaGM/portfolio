@@ -6,7 +6,6 @@ import Spinner from "../components/spinner/Spinner";
 import NothingToShow from "../components/errors/NothingToShow";
 
 const AboutPage = () => {
-  console.log("render about");
   const { errors, loading, author } = useContext(DataContext);
 
   const spinner = loading ? <Spinner /> : null;
