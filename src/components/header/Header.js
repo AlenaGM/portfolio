@@ -43,33 +43,23 @@ function Header() {
               </h1>
             </div>
           </Link>
-
           <nav className="navbar__menu">
             <ul className="navbar__menu_links">
-              <li key="home" className="navbar__menu_link">
-                <NavLink
-                  end
-                  style={({ isActive }) => ({
-                    color: isActive && "#00cccc",
-                  })}
-                  to={`/`}
-                >
-                  home
-                </NavLink>
-              </li>
-              {["about", "skills", "projects", "contact"].map((item) => (
-                <li key={item} className="navbar__menu_link">
-                  <NavLink
-                    end
-                    style={({ isActive }) => ({
-                      color: isActive && "#00cccc",
-                    })}
-                    to={`/${item}`}
-                  >
-                    {item}
-                  </NavLink>
-                </li>
-              ))}
+              {["home", "about", "skills", "projects", "contact"].map(
+                (item) => (
+                  <li key={item} className="navbar__menu_link">
+                    <NavLink
+                      end
+                      style={({ isActive }) => ({
+                        color: isActive && "#00cccc",
+                      })}
+                      to={`/${item}`}
+                    >
+                      {item}
+                    </NavLink>
+                  </li>
+                )
+              )}
             </ul>
           </nav>
 
@@ -133,22 +123,19 @@ function Header() {
             className="header__burger"
           >
             <ul className="header__burger_links">
-              <li key="home" className="header__burger_link">
-                <NavLink end to={`/`} onClick={() => closeBurgerMenu()}>
-                  home
-                </NavLink>
-              </li>
-              {["about", "skills", "projects", "contact"].map((item) => (
-                <li key={item} className="header__burger_link">
-                  <NavLink
-                    end
-                    to={`/${item}`}
-                    onClick={() => closeBurgerMenu()}
-                  >
-                    {item}
-                  </NavLink>
-                </li>
-              ))}
+              {["home", "about", "skills", "projects", "contact"].map(
+                (item) => (
+                  <li key={item} className="header__burger_link">
+                    <NavLink
+                      end
+                      to={`/${item}`}
+                      onClick={() => closeBurgerMenu()}
+                    >
+                      {item}
+                    </NavLink>
+                  </li>
+                )
+              )}
               <li>
                 <a
                   className="button"

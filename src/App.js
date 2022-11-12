@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import DataContextProvider from "./context/DataContext";
 import "./App.scss";
 
@@ -24,6 +24,7 @@ function App() {
           <main className="main">
             <Routes>
               <Route path="/" element={<HomePage />} />
+              <Route path="/home" element={<Navigate to="/" />} />
               <Route path="/about" element={<AboutPage />} />
               <Route path="/skills" element={<SkillsPage />} />
               <Route path="/projects" element={<ProjectsPage />} />
