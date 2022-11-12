@@ -1,1 +1,52 @@
 @import "../../assets/styles/variables.scss";
+
+.home {
+  &__container {
+    margin-left: 8%;
+
+    @media screen and (max-width: 900px) {
+      margin: 0 1.5rem;
+    }
+  }
+
+  &__title {
+    margin-top: 15%;
+    font-size: 2.25rem;
+    span {
+      font-size: 2.25rem;
+      @media screen and (max-width: 500px) {
+        font-size: 1.75rem;
+      }
+    }
+    @media screen and (max-width: 900px) {
+      margin-top: 0;
+    }
+    @media screen and (max-width: 500px) {
+      font-size: 1.75rem;
+      text-align: center;
+    }
+  }
+
+  &__intro {
+    font-family: "Open Sans", sans-serif;
+    margin-top: 2rem;
+    font-size: 1.25rem;
+    line-height: 1.2;
+    span {
+      font-family: "Open Sans", sans-serif;
+      font-size: 1.25rem;
+      color: $color-accent;
+      cursor: pointer;
+      &:hover {
+        color: $color-hover;
+      }
+      @media screen and (max-width: 500px) {
+        font-size: 1rem;
+      }
+    }
+    @media screen and (max-width: 500px) {
+      font-size: 1rem;
+      text-align: center;
+    }
+  }
+}

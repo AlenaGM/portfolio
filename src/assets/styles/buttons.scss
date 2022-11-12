@@ -16,15 +16,11 @@
   border: 1px solid $color-accent;
   border-radius: 4px;
   transition: background-color 0.15s, border-color 0.15s;
-
   &:hover {
     color: $color-bg;
-    background-color: $color-hover;
-    border: 1px solid $color-hover;
-    transform: scale(1.1, 1.1);
-  }
-  &:active {
-    background-color: $color-hover;
+    transform: scale(1.05, 1.05);
+    border: 1px solid rgb(0, 204, 204, 0.18);
+    box-shadow: 0 0 15px rgb(0, 255, 185, 0.3);
   }
 }
 
