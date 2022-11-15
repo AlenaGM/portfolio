@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
-import classnames from "classnames";
 import { SocialIcon } from "react-social-icons";
+import classnames from "classnames";
 import preventScroll from "prevent-scroll";
 import "./header.scss";
 

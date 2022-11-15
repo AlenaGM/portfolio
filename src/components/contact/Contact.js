@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import { useState, useContext } from "react";
 import { DataContext } from "../../context/DataContext";
 import { SocialIcon } from "react-social-icons";
 

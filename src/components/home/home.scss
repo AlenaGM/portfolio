@@ -32,10 +32,12 @@
     margin-top: 2rem;
     font-size: 1.25rem;
     line-height: 1.2;
+    text-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
     span {
       font-family: "Open Sans", sans-serif;
       font-size: 1.25rem;
       color: $color-accent;
+      text-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
       cursor: pointer;
       &:hover {
         color: $color-hover;

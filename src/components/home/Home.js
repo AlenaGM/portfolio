@@ -1,9 +1,8 @@
 import "./home.scss";
 
-import React from "react";
 import { Link } from "react-router-dom";
 
-const Home = ({ author, projects }) => {
+const Home = () => {
   return (
     <div className="home__container">
       <h2 className="home__title">

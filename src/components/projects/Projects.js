@@ -1,11 +1,10 @@
-import React, { useState, useContext } from "react";
-
+import { useState, useContext } from "react";
 import { motion } from "framer-motion";
 import { FaCat, FaGithub } from "react-icons/fa";
 
 import { urlFor } from "../../client";
-import "./projects.scss";
 import { DataContext } from "../../context/DataContext";
+import "./projects.scss";
 
 const Projects = () => {
   const { projects, filterProject, setFilterProject } = useContext(DataContext);
