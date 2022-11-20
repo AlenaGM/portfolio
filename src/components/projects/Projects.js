@@ -36,7 +36,7 @@ const Projects = () => {
         latest work experiences.
       </div>
       <div className="projects__filter">
-        {["React", "Vue", "JavaScript", "Wordpress", "Components", "All"].map(
+        {["React", "Vue", "JavaScript", "Components", "All"].map(
           (item, index) => (
             <div
               key={index}
