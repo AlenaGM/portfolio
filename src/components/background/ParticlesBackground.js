@@ -12,114 +12,67 @@ const ParticlesBackground = () => {
       id="tsparticles"
       init={particlesInit}
       options={{
-        fpsLimit: 120,
+        fps_limit: 120,
         interactivity: {
           events: {
-            onClick: {
+            onclick: { enable: true, mode: "push" },
+            onhover: {
               enable: true,
-              mode: "push",
-            },
-            onHover: {
-              enable: true,
-              mode: "grab",
+              mode: "attract",
+              parallax: { enable: false, force: 60, smooth: 10 },
             },
             resize: true,
           },
           modes: {
-            grab: {
-              distance: 140,
-              line_linked: {
-                opacity: 1,
-              },
-            },
-            bubble: {
-              distance: 400,
-              size: 40,
-              duration: 2,
-              opacity: 8,
-              speed: 3,
-            },
-            repulse: {
-              distance: 200,
-              duration: 0.4,
-            },
-            push: {
-              particles_nb: 4,
-            },
-            remove: {
-              particles_nb: 2,
-            },
+            push: { quantity: 4 },
+            attract: { distance: 140, duration: 0.4, factor: 5 },
           },
         },
         particles: {
-          color: {
-            value: "#66cccc",
-          },
-          links: {
+          color: { value: "#66cccc" },
+          line_linked: {
             color: "#66cccc",
             distance: 150,
             enable: true,
-            opacity: 0.5,
+            opacity: 0.4,
             width: 1,
           },
-          collisions: {
-            enable: true,
-          },
+
           move: {
-            directions: "none",
+            attract: { enable: false, rotateX: 600, rotateY: 1200 },
+            bounce: false,
+            direction: "none",
             enable: true,
-            outModes: {
-              default: "out",
-              bounce: false,
-            },
+            out_mode: "out",
             random: false,
             speed: 2,
             straight: false,
-            attract: {
-              enable: false,
-              rotateX: 600,
-              rotateY: 1200,
-            },
           },
-          number: {
-            density: {
-              enable: true,
-              area: 800,
-            },
-            value: 80,
-          },
+          number: { density: { enable: true, value_area: 800 }, value: 80 },
           opacity: {
-            value: 0.5,
+            anim: { enable: false, opacity_min: 0.1, speed: 0.1, sync: false },
             random: false,
-            anim: {
-              enable: false,
-              speed: 0.1,
-              opacity_min: 0.1,
-              sync: false,
-            },
+            value: 0.5,
           },
           shape: {
+            polygon: { nb_sides: 5 },
+            stroke: { color: "#000000", width: 0 },
             type: "circle",
-            stroke: {
-              width: 0,
-              color: "#000000",
-            },
-            polygon: {
-              nb_sides: 5,
-            },
           },
           size: {
-            value: 2.5,
+            anim: { enable: false, size_min: 0.1, speed: 10, sync: false },
             random: true,
-            anim: {
-              enable: false,
-              speed: 10,
-              size_min: 0.1,
-              sync: false,
-            },
+            value: 2.5,
           },
         },
-        detectRetina: true,
+        polygon: {
+          draw: { enable: false, lineColor: "#ffffff", lineWidth: 0.5 },
+          move: { radius: 10 },
+          scale: 1,
+          type: "none",
+          url: "",
+        },
+        retina_detect: true,
       }}
     />
   );
