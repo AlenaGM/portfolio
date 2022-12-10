@@ -1,6 +1,7 @@
 import "./home.scss";
 
 import { Link } from "react-router-dom";
+import me from "../../assets/images/me.png";
 
 const Home = () => {
   return (
@@ -22,6 +23,9 @@ const Home = () => {
           <span>get in touch</span>
         </Link>{" "}
         to chat.
+      </div>
+      <div className="home__image">
+        <img src={me} alt="me" />
       </div>
     </div>
   );

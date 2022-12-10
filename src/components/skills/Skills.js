@@ -49,11 +49,6 @@ const Skills = ({ skills, experiences }) => {
           ))}
         </div>
       </div>
-
-      <div className="skills_current">
-        <h3>Currently I'm working on</h3>
-        <p>Learning wordpress and revising javascript</p>
-      </div>
     </div>
   );
 };
