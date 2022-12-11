@@ -24,9 +24,6 @@ const Home = () => {
         </Link>{" "}
         to chat.
       </div>
-      <div className="home__image">
-        <img src={me} alt="me" />
-      </div>
     </div>
   );
 };
