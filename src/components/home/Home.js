@@ -1,7 +1,6 @@
 import "./home.scss";
 
 import { Link } from "react-router-dom";
-import me from "../../assets/images/me.png";
 
 const Home = () => {
   return (
