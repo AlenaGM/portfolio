@@ -10,7 +10,7 @@ Here you will find: <br>
 All is done with help of React for frontend and Sanity for backend.
 
 ##
-*_Although, my portfolio is mostly ready, I still have doubts about design solutions_
+*_Although, my portfolio is mostly ready, I still have some doubts about design solutions_
 
    [Portfolio]: <https://alenaportfolio.netlify.app/>
 
