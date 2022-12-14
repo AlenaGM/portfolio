@@ -1,9 +1,13 @@
-My portfolio:
-1/ My story in IT
-2/ Some skills and tools I use to bring my projects in life
-3/ Some of my recent projects
-4/ How to contact me
+_Welcome to my portfolio!_ 👩‍🎨
 
-All done with help of React and Sanity for backend.
+Here you will find: <br>
+👩‍💻 My story as a web-developer; <br>
+🪛 Some of my favourite tools I use to bring my projects to life;<br>
+🃏 My recent projects; <br>
+📧How you can contact me.<br><br>
 
-It is mostly ready, but I'm still thinking about design solutions 
+All is done with help of React for frontend and Sanity for backend.
+
+*_Although, my portfolio is mostly ready, I still have doubts about design solutions_
+
+[portfolio] : <https://alenaportfolio.netlify.app/>
